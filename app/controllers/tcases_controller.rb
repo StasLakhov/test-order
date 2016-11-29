@@ -9,6 +9,7 @@ class TcasesController < ApplicationController
   end
 
   def new
+    @tcase = Tcase.new
 
   end
 
@@ -20,10 +21,25 @@ class TcasesController < ApplicationController
 
   end
 
+  def edit
+    @tcase = Tcase.find(params[:id])
+
+  end
+
+  def update
+
+  end
+
+  def destroy
+    @tcase = Tcase.find(params[:id])
+    @tcase.destroy
+    redirect_to tcases_path
+  end
+
   private
 
   def tcase_params
-    params.require(:tcases).permit(:title, :description, :instruction)
+    params.require(:tcase).permit(:title, :description, :instruction)
   end
 
 

@@ -12,6 +12,7 @@
         <td><%= t.title %></td>
         <td><%= t.description %></td>
         <td><%= t.instruction %></td>
+        <td><%= link_to 'Delete', t, method: :delete, data: {confirm: 'Are you sure ?'} %></td>
 
       </tr>
   <% end %>

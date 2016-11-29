@@ -1504,3 +1504,596 @@ Processing by TcasesController#index as HTML
 Completed 200 OK in 17ms (Views: 15.4ms | ActiveRecord: 0.4ms)
 
 
+Started GET "/tcases/new" for 127.0.0.1 at 2016-11-29 00:45:27 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by TcasesController#new as HTML
+  Rendering tcases/new.html.erb within layouts/application
+  Rendered tcases/new.html.erb within layouts/application (17.0ms)
+Completed 200 OK in 220ms (Views: 212.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tcases/new" for 127.0.0.1 at 2016-11-29 00:45:27 -0800
+Processing by TcasesController#new as HTML
+  Rendering tcases/new.html.erb within layouts/application
+  Rendered tcases/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 16ms (Views: 15.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tcases" for 127.0.0.1 at 2016-11-29 00:45:39 -0800
+Processing by TcasesController#index as HTML
+  Rendering tcases/index.html.erb within layouts/application
+  [1m[36mTcase Load (0.5ms)[0m  [1m[34mSELECT "tcases".* FROM "tcases"[0m
+  Rendered tcases/index.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 25ms (Views: 19.7ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/tcases" for 127.0.0.1 at 2016-11-29 01:24:01 -0800
+Processing by TcasesController#index as HTML
+  Rendering tcases/index.html.erb within layouts/application
+  [1m[36mTcase Load (3.1ms)[0m  [1m[34mSELECT "tcases".* FROM "tcases"[0m
+  Rendered tcases/index.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 91ms (Views: 85.0ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/tcases" for 127.0.0.1 at 2016-11-29 01:24:04 -0800
+Processing by TcasesController#index as HTML
+  Rendering tcases/index.html.erb within layouts/application
+  [1m[36mTcase Load (0.4ms)[0m  [1m[34mSELECT "tcases".* FROM "tcases"[0m
+  Rendered tcases/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 32ms (Views: 29.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tcases" for 127.0.0.1 at 2016-11-29 01:24:28 -0800
+Processing by TcasesController#index as HTML
+  Rendering tcases/index.html.erb within layouts/application
+  [1m[36mTcase Load (0.5ms)[0m  [1m[34mSELECT "tcases".* FROM "tcases"[0m
+  Rendered tcases/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 45ms (Views: 43.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/tcases/36" for 127.0.0.1 at 2016-11-29 01:24:32 -0800
+Processing by TcasesController#show as HTML
+  Parameters: {"id"=>"36"}
+  [1m[36mTcase Load (0.8ms)[0m  [1m[34mSELECT  "tcases".* FROM "tcases" WHERE "tcases"."id" = $1 LIMIT $2[0m  [["id", 36], ["LIMIT", 1]]
+  Rendering tcases/show.html.erb within layouts/application
+  Rendered tcases/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 60ms (Views: 36.6ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/tcases" for 127.0.0.1 at 2016-11-29 01:25:37 -0800
+Processing by TcasesController#index as HTML
+  Rendering tcases/index.html.erb within layouts/application
+  [1m[36mTcase Load (0.3ms)[0m  [1m[34mSELECT "tcases".* FROM "tcases"[0m
+  Rendered tcases/index.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 27ms (Views: 23.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tcases/36" for 127.0.0.1 at 2016-11-29 01:25:39 -0800
+Processing by TcasesController#show as HTML
+  Parameters: {"id"=>"36"}
+  [1m[36mTcase Load (0.4ms)[0m  [1m[34mSELECT  "tcases".* FROM "tcases" WHERE "tcases"."id" = $1 LIMIT $2[0m  [["id", 36], ["LIMIT", 1]]
+  Rendering tcases/show.html.erb within layouts/application
+  Rendered tcases/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 19ms (Views: 16.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tcases" for 127.0.0.1 at 2016-11-29 01:33:36 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by TcasesController#index as HTML
+  Rendering tcases/index.html.erb within layouts/application
+  [1m[36mTcase Load (0.4ms)[0m  [1m[34mSELECT "tcases".* FROM "tcases"[0m
+  Rendered tcases/index.html.erb within layouts/application (14.7ms)
+Completed 200 OK in 225ms (Views: 213.0ms | ActiveRecord: 2.9ms)
+
+
+Started DELETE "/tcases/36" for 127.0.0.1 at 2016-11-29 01:33:42 -0800
+Processing by TcasesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"tWwMqi2pOM7PoLG2qrbjluMt+IZh8j3ubLXQaYgSUY+ISIXnNwWW9IxcRGKfkkUSjrgGPmw9V6N8FTDOmadPZg==", "id"=>"36"}
+  [1m[36mTcase Load (0.5ms)[0m  [1m[34mSELECT  "tcases".* FROM "tcases" WHERE "tcases"."id" = $1 LIMIT $2[0m  [["id", 36], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "tcases" WHERE "tcases"."id" = $1[0m  [["id", 36]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+No template found for TcasesController#destroy, rendering head :no_content
+Completed 204 No Content in 20ms (ActiveRecord: 2.9ms)
+
+
+Started GET "/tcases" for 127.0.0.1 at 2016-11-29 01:34:41 -0800
+Processing by TcasesController#index as HTML
+  Rendering tcases/index.html.erb within layouts/application
+  [1m[36mTcase Load (0.8ms)[0m  [1m[34mSELECT "tcases".* FROM "tcases"[0m
+  Rendered tcases/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 23ms (Views: 20.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/tcases" for 127.0.0.1 at 2016-11-29 01:35:33 -0800
+Processing by TcasesController#index as HTML
+  Rendering tcases/index.html.erb within layouts/application
+  [1m[36mTcase Load (0.3ms)[0m  [1m[34mSELECT "tcases".* FROM "tcases"[0m
+  Rendered tcases/index.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 28ms (Views: 24.2ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/tcases/39" for 127.0.0.1 at 2016-11-29 01:35:36 -0800
+Processing by TcasesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"EzCjviDcFAz4nA0+y1+x+GMV+wHHzLvIz4mm8lejmZcuFCrzOnC6Nrtg+Or+exd8DoAFucoD0YXfKUZVRhaHfg==", "id"=>"39"}
+  [1m[36mTcase Load (0.4ms)[0m  [1m[34mSELECT  "tcases".* FROM "tcases" WHERE "tcases"."id" = $1 LIMIT $2[0m  [["id", 39], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "tcases" WHERE "tcases"."id" = $1[0m  [["id", 39]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/tcases
+Completed 302 Found in 7ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/tcases" for 127.0.0.1 at 2016-11-29 01:35:36 -0800
+Processing by TcasesController#index as HTML
+  Rendering tcases/index.html.erb within layouts/application
+  [1m[36mTcase Load (0.4ms)[0m  [1m[34mSELECT "tcases".* FROM "tcases"[0m
+  Rendered tcases/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 45ms (Views: 43.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tcases" for 127.0.0.1 at 2016-11-29 01:35:56 -0800
+Processing by TcasesController#index as HTML
+  Rendering tcases/index.html.erb within layouts/application
+  [1m[36mTcase Load (1.0ms)[0m  [1m[34mSELECT "tcases".* FROM "tcases"[0m
+  Rendered tcases/index.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 42ms (Views: 39.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/tcases/new" for 127.0.0.1 at 2016-11-29 01:36:37 -0800
+Processing by TcasesController#new as HTML
+  Rendering tcases/new.html.erb within layouts/application
+  Rendered tcases/new.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 40ms (Views: 39.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tcases" for 127.0.0.1 at 2016-11-29 01:36:41 -0800
+Processing by TcasesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IdhfnzXh6FyVVXeh5sDvi5TEljJs54Z4VkGwxcYD9m0c/NbSL01GZtapgnXT5EkP+VFoimEo7DVG4VBi17bohA==", "tcases"=>{"title"=>"", "description"=>"", "instruction"=>""}, "commit"=>"Save Tcases"}
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.3ms)[0m  [1m[32mINSERT INTO "tcases" ("title", "description", "instruction", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", ""], ["description", ""], ["instruction", ""], ["created_at", 2016-11-29 09:36:41 UTC], ["updated_at", 2016-11-29 09:36:41 UTC]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/tcases/40
+Completed 302 Found in 11ms (ActiveRecord: 3.3ms)
+
+
+Started GET "/tcases/40" for 127.0.0.1 at 2016-11-29 01:36:41 -0800
+Processing by TcasesController#show as HTML
+  Parameters: {"id"=>"40"}
+  [1m[36mTcase Load (0.4ms)[0m  [1m[34mSELECT  "tcases".* FROM "tcases" WHERE "tcases"."id" = $1 LIMIT $2[0m  [["id", 40], ["LIMIT", 1]]
+  Rendering tcases/show.html.erb within layouts/application
+  Rendered tcases/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 26ms (Views: 22.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/tcases" for 127.0.0.1 at 2016-11-29 01:36:43 -0800
+Processing by TcasesController#index as HTML
+  Rendering tcases/index.html.erb within layouts/application
+  [1m[36mTcase Load (0.4ms)[0m  [1m[34mSELECT "tcases".* FROM "tcases"[0m
+  Rendered tcases/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 23ms (Views: 21.6ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/tcases/40" for 127.0.0.1 at 2016-11-29 01:36:46 -0800
+Processing by TcasesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"W+enZUU5ePWcDejAFoQ+9XLKUYoPHmQOGPCvnlNx7AVmwy4oX5XWz9/xHRQjoJhxH1+vMgLRDkMIUE85QsTy7A==", "id"=>"40"}
+  [1m[36mTcase Load (0.9ms)[0m  [1m[34mSELECT  "tcases".* FROM "tcases" WHERE "tcases"."id" = $1 LIMIT $2[0m  [["id", 40], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "tcases" WHERE "tcases"."id" = $1[0m  [["id", 40]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/tcases
+Completed 302 Found in 7ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/tcases" for 127.0.0.1 at 2016-11-29 01:36:46 -0800
+Processing by TcasesController#index as HTML
+  Rendering tcases/index.html.erb within layouts/application
+  [1m[36mTcase Load (0.7ms)[0m  [1m[34mSELECT "tcases".* FROM "tcases"[0m
+  Rendered tcases/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 24ms (Views: 22.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/tcases" for 127.0.0.1 at 2016-11-29 02:10:21 -0800
+Processing by TcasesController#index as HTML
+  Rendering tcases/index.html.erb within layouts/application
+  [1m[36mTcase Load (0.7ms)[0m  [1m[34mSELECT "tcases".* FROM "tcases"[0m
+  Rendered tcases/index.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 51ms (Views: 46.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/tcases/new" for 127.0.0.1 at 2016-11-29 02:10:24 -0800
+Processing by TcasesController#new as HTML
+  Rendering tcases/new.html.erb within layouts/application
+  Rendered tcases/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 15ms (Views: 14.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tcases" for 127.0.0.1 at 2016-11-29 02:10:27 -0800
+Processing by TcasesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kRo9zvNGfyfBPRav0+JZbLo4LVPV83wrL44t3RX8rQSsPrSD6erRHYLB43vmxv/o163T69g8FmY/Ls16BEmz7Q==", "tcases"=>{"title"=>"", "description"=>"", "instruction"=>""}, "commit"=>"Save Tcases"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "tcases" ("title", "description", "instruction", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", ""], ["description", ""], ["instruction", ""], ["created_at", 2016-11-29 10:10:27 UTC], ["updated_at", 2016-11-29 10:10:27 UTC]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/tcases/41
+Completed 302 Found in 7ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/tcases/41" for 127.0.0.1 at 2016-11-29 02:10:27 -0800
+Processing by TcasesController#show as HTML
+  Parameters: {"id"=>"41"}
+  [1m[36mTcase Load (0.4ms)[0m  [1m[34mSELECT  "tcases".* FROM "tcases" WHERE "tcases"."id" = $1 LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  Rendering tcases/show.html.erb within layouts/application
+  Rendered tcases/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 16ms (Views: 13.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tcases" for 127.0.0.1 at 2016-11-29 02:10:29 -0800
+Processing by TcasesController#index as HTML
+  Rendering tcases/index.html.erb within layouts/application
+  [1m[36mTcase Load (0.7ms)[0m  [1m[34mSELECT "tcases".* FROM "tcases"[0m
+  Rendered tcases/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 23ms (Views: 21.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/tcases" for 127.0.0.1 at 2016-11-29 02:10:31 -0800
+Processing by TcasesController#index as HTML
+  Rendering tcases/index.html.erb within layouts/application
+  [1m[36mTcase Load (0.6ms)[0m  [1m[34mSELECT "tcases".* FROM "tcases"[0m
+  Rendered tcases/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 24ms (Views: 22.2ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/tcases/41" for 127.0.0.1 at 2016-11-29 02:10:37 -0800
+Processing by TcasesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"djYBjBhXkj+bzI7MZKG5Hn58SCN5kcUsC4fCZoGvGeJLEojBAvs8BdgwexhRhR+aE+m2m3Rer2EbJyLBkBoHCw==", "id"=>"41"}
+  [1m[36mTcase Load (0.3ms)[0m  [1m[34mSELECT  "tcases".* FROM "tcases" WHERE "tcases"."id" = $1 LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "tcases" WHERE "tcases"."id" = $1[0m  [["id", 41]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/tcases
+Completed 302 Found in 4ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/tcases" for 127.0.0.1 at 2016-11-29 02:10:37 -0800
+Processing by TcasesController#index as HTML
+  Rendering tcases/index.html.erb within layouts/application
+  [1m[36mTcase Load (0.4ms)[0m  [1m[34mSELECT "tcases".* FROM "tcases"[0m
+  Rendered tcases/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 17ms (Views: 15.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tcases/new" for 127.0.0.1 at 2016-11-29 02:12:26 -0800
+Processing by TcasesController#new as HTML
+  Rendering tcases/new.html.erb within layouts/application
+  Rendered tcases/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 22ms (Views: 13.6ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/tcases/new" for 127.0.0.1 at 2016-11-29 02:13:34 -0800
+Processing by TcasesController#new as HTML
+  Rendering tcases/new.html.erb within layouts/application
+  Rendered tcases/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 22ms (Views: 20.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tcases/38" for 127.0.0.1 at 2016-11-29 02:13:36 -0800
+Processing by TcasesController#show as HTML
+  Parameters: {"id"=>"38"}
+  [1m[36mTcase Load (1.0ms)[0m  [1m[34mSELECT  "tcases".* FROM "tcases" WHERE "tcases"."id" = $1 LIMIT $2[0m  [["id", 38], ["LIMIT", 1]]
+  Rendering tcases/show.html.erb within layouts/application
+  Rendered tcases/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 27ms (Views: 21.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/tcases/38/edit" for 127.0.0.1 at 2016-11-29 02:13:42 -0800
+Processing by TcasesController#edit as HTML
+  Parameters: {"id"=>"38"}
+  [1m[36mTcase Load (0.8ms)[0m  [1m[34mSELECT  "tcases".* FROM "tcases" WHERE "tcases"."id" = $1 LIMIT $2[0m  [["id", 38], ["LIMIT", 1]]
+  Rendering tcases/edit.html.erb within layouts/application
+  Rendered tcases/edit.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 27ms (Views: 24.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/tcases/new" for 127.0.0.1 at 2016-11-29 02:14:01 -0800
+Processing by TcasesController#new as HTML
+  Rendering tcases/new.html.erb within layouts/application
+  Rendered tcases/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 13ms (Views: 12.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tcases/1/edit" for 127.0.0.1 at 2016-11-29 02:14:04 -0800
+Processing by TcasesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTcase Load (0.8ms)[0m  [1m[34mSELECT  "tcases".* FROM "tcases" WHERE "tcases"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tcases/edit.html.erb within layouts/application
+  Rendered tcases/edit.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 34ms (Views: 28.7ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/tcases/new" for 127.0.0.1 at 2016-11-29 02:15:05 -0800
+Processing by TcasesController#new as HTML
+  Rendering tcases/new.html.erb within layouts/application
+  Rendered tcases/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 18ms (Views: 17.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tcases" for 127.0.0.1 at 2016-11-29 02:15:08 -0800
+Processing by TcasesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ws4ZDbgnHSgI6Mu9DBmnQi1aSwZu7lz/Oc87J42mta5n6pBAoouzEksUPmk5PQHGQM+1vmMhNrIpb9uAnBOrRw==", "tcase"=>{"title"=>"", "description"=>"", "instruction"=>""}, "commit"=>"Create Tcase"}
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: tcases):
+  
+app/controllers/tcases_controller.rb:42:in `tcase_params'
+app/controllers/tcases_controller.rb:17:in `create'
+  Rendering /home/stas/.rvm/gems/ruby-2.3.1@torder/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/stas/.rvm/gems/ruby-2.3.1@torder/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/stas/.rvm/gems/ruby-2.3.1@torder/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.4ms)
+  Rendering /home/stas/.rvm/gems/ruby-2.3.1@torder/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/stas/.rvm/gems/ruby-2.3.1@torder/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendering /home/stas/.rvm/gems/ruby-2.3.1@torder/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/stas/.rvm/gems/ruby-2.3.1@torder/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/stas/.rvm/gems/ruby-2.3.1@torder/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (19.8ms)
+Started POST "/tcases" for 127.0.0.1 at 2016-11-29 02:15:23 -0800
+Processing by TcasesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ws4ZDbgnHSgI6Mu9DBmnQi1aSwZu7lz/Oc87J42mta5n6pBAoouzEksUPmk5PQHGQM+1vmMhNrIpb9uAnBOrRw==", "tcase"=>{"title"=>"u", "description"=>"u", "instruction"=>"u"}, "commit"=>"Create Tcase"}
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: tcases):
+  
+app/controllers/tcases_controller.rb:42:in `tcase_params'
+app/controllers/tcases_controller.rb:17:in `create'
+  Rendering /home/stas/.rvm/gems/ruby-2.3.1@torder/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/stas/.rvm/gems/ruby-2.3.1@torder/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/stas/.rvm/gems/ruby-2.3.1@torder/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.3ms)
+  Rendering /home/stas/.rvm/gems/ruby-2.3.1@torder/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/stas/.rvm/gems/ruby-2.3.1@torder/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendering /home/stas/.rvm/gems/ruby-2.3.1@torder/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/stas/.rvm/gems/ruby-2.3.1@torder/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/stas/.rvm/gems/ruby-2.3.1@torder/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (18.7ms)
+Started POST "/tcases" for 127.0.0.1 at 2016-11-29 02:15:45 -0800
+Processing by TcasesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ws4ZDbgnHSgI6Mu9DBmnQi1aSwZu7lz/Oc87J42mta5n6pBAoouzEksUPmk5PQHGQM+1vmMhNrIpb9uAnBOrRw==", "tcase"=>{"title"=>"u", "description"=>"u", "instruction"=>"u"}, "commit"=>"Create Tcase"}
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: tcases):
+  
+app/controllers/tcases_controller.rb:42:in `tcase_params'
+app/controllers/tcases_controller.rb:17:in `create'
+  Rendering /home/stas/.rvm/gems/ruby-2.3.1@torder/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/stas/.rvm/gems/ruby-2.3.1@torder/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/stas/.rvm/gems/ruby-2.3.1@torder/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.2ms)
+  Rendering /home/stas/.rvm/gems/ruby-2.3.1@torder/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/stas/.rvm/gems/ruby-2.3.1@torder/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendering /home/stas/.rvm/gems/ruby-2.3.1@torder/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/stas/.rvm/gems/ruby-2.3.1@torder/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/stas/.rvm/gems/ruby-2.3.1@torder/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (17.2ms)
+Started POST "/tcases" for 127.0.0.1 at 2016-11-29 02:16:15 -0800
+Processing by TcasesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ws4ZDbgnHSgI6Mu9DBmnQi1aSwZu7lz/Oc87J42mta5n6pBAoouzEksUPmk5PQHGQM+1vmMhNrIpb9uAnBOrRw==", "tcase"=>{"title"=>"u", "description"=>"u", "instruction"=>"u"}, "commit"=>"Create Tcase"}
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: tcases):
+  
+app/controllers/tcases_controller.rb:42:in `tcase_params'
+app/controllers/tcases_controller.rb:17:in `create'
+  Rendering /home/stas/.rvm/gems/ruby-2.3.1@torder/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/stas/.rvm/gems/ruby-2.3.1@torder/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/stas/.rvm/gems/ruby-2.3.1@torder/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.2ms)
+  Rendering /home/stas/.rvm/gems/ruby-2.3.1@torder/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/stas/.rvm/gems/ruby-2.3.1@torder/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendering /home/stas/.rvm/gems/ruby-2.3.1@torder/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/stas/.rvm/gems/ruby-2.3.1@torder/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/stas/.rvm/gems/ruby-2.3.1@torder/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (16.5ms)
+Started POST "/tcases" for 127.0.0.1 at 2016-11-29 02:17:38 -0800
+Processing by TcasesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ws4ZDbgnHSgI6Mu9DBmnQi1aSwZu7lz/Oc87J42mta5n6pBAoouzEksUPmk5PQHGQM+1vmMhNrIpb9uAnBOrRw==", "tcase"=>{"title"=>"u", "description"=>"u", "instruction"=>"u"}, "commit"=>"Create Tcase"}
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: tcases):
+  
+app/controllers/tcases_controller.rb:42:in `tcase_params'
+app/controllers/tcases_controller.rb:17:in `create'
+  Rendering /home/stas/.rvm/gems/ruby-2.3.1@torder/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/stas/.rvm/gems/ruby-2.3.1@torder/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/stas/.rvm/gems/ruby-2.3.1@torder/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.9ms)
+  Rendering /home/stas/.rvm/gems/ruby-2.3.1@torder/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/stas/.rvm/gems/ruby-2.3.1@torder/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering /home/stas/.rvm/gems/ruby-2.3.1@torder/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/stas/.rvm/gems/ruby-2.3.1@torder/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/stas/.rvm/gems/ruby-2.3.1@torder/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (20.8ms)
+Started POST "/tcases" for 127.0.0.1 at 2016-11-29 02:17:52 -0800
+Processing by TcasesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ws4ZDbgnHSgI6Mu9DBmnQi1aSwZu7lz/Oc87J42mta5n6pBAoouzEksUPmk5PQHGQM+1vmMhNrIpb9uAnBOrRw==", "tcase"=>{"title"=>"u", "description"=>"u", "instruction"=>"u"}, "commit"=>"Create Tcase"}
+Completed 400 Bad Request in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: tcases):
+  
+app/controllers/tcases_controller.rb:42:in `tcase_params'
+app/controllers/tcases_controller.rb:17:in `create'
+  Rendering /home/stas/.rvm/gems/ruby-2.3.1@torder/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/stas/.rvm/gems/ruby-2.3.1@torder/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/stas/.rvm/gems/ruby-2.3.1@torder/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.5ms)
+  Rendering /home/stas/.rvm/gems/ruby-2.3.1@torder/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/stas/.rvm/gems/ruby-2.3.1@torder/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendering /home/stas/.rvm/gems/ruby-2.3.1@torder/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/stas/.rvm/gems/ruby-2.3.1@torder/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/stas/.rvm/gems/ruby-2.3.1@torder/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (16.0ms)
+Started POST "/tcases" for 127.0.0.1 at 2016-11-29 02:18:36 -0800
+Processing by TcasesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ws4ZDbgnHSgI6Mu9DBmnQi1aSwZu7lz/Oc87J42mta5n6pBAoouzEksUPmk5PQHGQM+1vmMhNrIpb9uAnBOrRw==", "tcase"=>{"title"=>"u", "description"=>"u", "instruction"=>"u"}, "commit"=>"Create Tcase"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "tcases" ("title", "description", "instruction", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "u"], ["description", "u"], ["instruction", "u"], ["created_at", 2016-11-29 10:18:36 UTC], ["updated_at", 2016-11-29 10:18:36 UTC]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/tcases/42
+Completed 302 Found in 9ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/tcases/42" for 127.0.0.1 at 2016-11-29 02:18:36 -0800
+Processing by TcasesController#show as HTML
+  Parameters: {"id"=>"42"}
+  [1m[36mTcase Load (0.3ms)[0m  [1m[34mSELECT  "tcases".* FROM "tcases" WHERE "tcases"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+  Rendering tcases/show.html.erb within layouts/application
+  Rendered tcases/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 18ms (Views: 15.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tcases" for 127.0.0.1 at 2016-11-29 02:18:41 -0800
+Processing by TcasesController#index as HTML
+  Rendering tcases/index.html.erb within layouts/application
+  [1m[36mTcase Load (0.4ms)[0m  [1m[34mSELECT "tcases".* FROM "tcases"[0m
+  Rendered tcases/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 17ms (Views: 15.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tcases/38/edit" for 127.0.0.1 at 2016-11-29 02:18:50 -0800
+Processing by TcasesController#edit as HTML
+  Parameters: {"id"=>"38"}
+  [1m[36mTcase Load (0.4ms)[0m  [1m[34mSELECT  "tcases".* FROM "tcases" WHERE "tcases"."id" = $1 LIMIT $2[0m  [["id", 38], ["LIMIT", 1]]
+  Rendering tcases/edit.html.erb within layouts/application
+  Rendered tcases/edit.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 21ms (Views: 18.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tcases/38/edit" for 127.0.0.1 at 2016-11-29 02:19:17 -0800
+Processing by TcasesController#edit as HTML
+  Parameters: {"id"=>"38"}
+  [1m[36mTcase Load (0.6ms)[0m  [1m[34mSELECT  "tcases".* FROM "tcases" WHERE "tcases"."id" = $1 LIMIT $2[0m  [["id", 38], ["LIMIT", 1]]
+  Rendering tcases/edit.html.erb within layouts/application
+  Rendered tcases/edit.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 25ms (Views: 21.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/tcases/new" for 127.0.0.1 at 2016-11-29 02:19:22 -0800
+Processing by TcasesController#new as HTML
+  Rendering tcases/new.html.erb within layouts/application
+  Rendered tcases/new.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <%= form_for @tcases do |f| %>
+    2:     <p>
+    3:       <%= f.label :title %><br>
+    4:       <%= f.text_field :title %>
+  
+app/views/tcases/new.html.erb:1:in `_app_views_tcases_new_html_erb___1514186902357634424_23624820'
+  Rendering /home/stas/.rvm/gems/ruby-2.3.1@torder/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/stas/.rvm/gems/ruby-2.3.1@torder/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/stas/.rvm/gems/ruby-2.3.1@torder/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.9ms)
+  Rendering /home/stas/.rvm/gems/ruby-2.3.1@torder/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/stas/.rvm/gems/ruby-2.3.1@torder/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendering /home/stas/.rvm/gems/ruby-2.3.1@torder/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/stas/.rvm/gems/ruby-2.3.1@torder/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/stas/.rvm/gems/ruby-2.3.1@torder/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (16.3ms)
+Started GET "/tcases/new" for 127.0.0.1 at 2016-11-29 02:19:33 -0800
+Processing by TcasesController#new as HTML
+  Rendering tcases/new.html.erb within layouts/application
+  Rendered tcases/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 19ms (Views: 17.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tcases" for 127.0.0.1 at 2016-11-29 02:19:38 -0800
+Processing by TcasesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7XRmsfsEh1cQqHr1Qtx4uH3DkIUDqB+4oa+UKv9p7n/QUO/84agpbVNUjyF3+N48EFZuPQ5ndfWxD3SN7tzwlg==", "tcase"=>{"title"=>"w", "description"=>"1", "instruction"=>"1"}, "commit"=>"Create Tcase"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "tcases" ("title", "description", "instruction", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "w"], ["description", "1"], ["instruction", "1"], ["created_at", 2016-11-29 10:19:38 UTC], ["updated_at", 2016-11-29 10:19:38 UTC]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/tcases/43
+Completed 302 Found in 6ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/tcases/43" for 127.0.0.1 at 2016-11-29 02:19:38 -0800
+Processing by TcasesController#show as HTML
+  Parameters: {"id"=>"43"}
+  [1m[36mTcase Load (0.5ms)[0m  [1m[34mSELECT  "tcases".* FROM "tcases" WHERE "tcases"."id" = $1 LIMIT $2[0m  [["id", 43], ["LIMIT", 1]]
+  Rendering tcases/show.html.erb within layouts/application
+  Rendered tcases/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 21ms (Views: 18.9ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/tcases" for 127.0.0.1 at 2016-11-29 02:19:41 -0800
+Processing by TcasesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7XRmsfsEh1cQqHr1Qtx4uH3DkIUDqB+4oa+UKv9p7n/QUO/84agpbVNUjyF3+N48EFZuPQ5ndfWxD3SN7tzwlg==", "tcase"=>{"title"=>"w", "description"=>"1", "instruction"=>"1"}, "commit"=>"Create Tcase"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.9ms)[0m  [1m[32mINSERT INTO "tcases" ("title", "description", "instruction", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "w"], ["description", "1"], ["instruction", "1"], ["created_at", 2016-11-29 10:19:41 UTC], ["updated_at", 2016-11-29 10:19:41 UTC]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/tcases/44
+Completed 302 Found in 11ms (ActiveRecord: 4.4ms)
+
+
+Started GET "/tcases/44" for 127.0.0.1 at 2016-11-29 02:19:41 -0800
+Processing by TcasesController#show as HTML
+  Parameters: {"id"=>"44"}
+  [1m[36mTcase Load (0.7ms)[0m  [1m[34mSELECT  "tcases".* FROM "tcases" WHERE "tcases"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  Rendering tcases/show.html.erb within layouts/application
+  Rendered tcases/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 31ms (Views: 28.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/tcases/44/edit" for 127.0.0.1 at 2016-11-29 02:19:46 -0800
+Processing by TcasesController#edit as HTML
+  Parameters: {"id"=>"44"}
+  [1m[36mTcase Load (0.6ms)[0m  [1m[34mSELECT  "tcases".* FROM "tcases" WHERE "tcases"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  Rendering tcases/edit.html.erb within layouts/application
+  Rendered tcases/edit.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 25ms (Views: 22.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/tcases/44/edit" for 127.0.0.1 at 2016-11-29 02:19:48 -0800
+Processing by TcasesController#edit as HTML
+  Parameters: {"id"=>"44"}
+  [1m[36mTcase Load (0.4ms)[0m  [1m[34mSELECT  "tcases".* FROM "tcases" WHERE "tcases"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  Rendering tcases/edit.html.erb within layouts/application
+  Rendered tcases/edit.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 23ms (Views: 20.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tcases/new" for 127.0.0.1 at 2016-11-29 02:20:00 -0800
+Processing by TcasesController#new as HTML
+  Rendering tcases/new.html.erb within layouts/application
+  Rendered tcases/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 25ms (Views: 24.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tcases" for 127.0.0.1 at 2016-11-29 02:20:05 -0800
+Processing by TcasesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fVu3wdBGJHyhrrlLPhRuEhRRYQM2jDHIxolLORRO5sxAfz6MyuqKRuJSTJ8LMMiWecSfuztDW4XWKaueBfv4JQ==", "tcase"=>{"title"=>"1", "description"=>"2", "instruction"=>"3"}, "commit"=>"Create Tcase"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "tcases" ("title", "description", "instruction", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "1"], ["description", "2"], ["instruction", "3"], ["created_at", 2016-11-29 10:20:05 UTC], ["updated_at", 2016-11-29 10:20:05 UTC]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/tcases/45
+Completed 302 Found in 7ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/tcases/45" for 127.0.0.1 at 2016-11-29 02:20:05 -0800
+Processing by TcasesController#show as HTML
+  Parameters: {"id"=>"45"}
+  [1m[36mTcase Load (0.4ms)[0m  [1m[34mSELECT  "tcases".* FROM "tcases" WHERE "tcases"."id" = $1 LIMIT $2[0m  [["id", 45], ["LIMIT", 1]]
+  Rendering tcases/show.html.erb within layouts/application
+  Rendered tcases/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 17ms (Views: 15.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tcases/45/edit" for 127.0.0.1 at 2016-11-29 02:20:09 -0800
+Processing by TcasesController#edit as HTML
+  Parameters: {"id"=>"45"}
+  [1m[36mTcase Load (0.4ms)[0m  [1m[34mSELECT  "tcases".* FROM "tcases" WHERE "tcases"."id" = $1 LIMIT $2[0m  [["id", 45], ["LIMIT", 1]]
+  Rendering tcases/edit.html.erb within layouts/application
+  Rendered tcases/edit.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 24ms (Views: 22.1ms | ActiveRecord: 0.4ms)
+
+
