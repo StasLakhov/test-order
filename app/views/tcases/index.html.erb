@@ -7,11 +7,11 @@
     <th>Instruction</th>
   </tr>
 
-  <% @case.each do |c| %>
+  <% @tcase.each do |t| %>
       <tr>
-        <td><%= c.title %></td>
-        <td><%= c.description %></td>
-        <td><%= c.instruction %></td>
+        <td><%= t.title %></td>
+        <td><%= t.description %></td>
+        <td><%= t.instruction %></td>
 
       </tr>
   <% end %>

@@ -1,0 +1,2 @@
+class Tcase < ApplicationRecord
+end
