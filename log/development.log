@@ -25,3 +25,356 @@ WHERE c.contype = 'f'
   AND t3.nspname = ANY (current_schemas(false))
 ORDER BY c.conname
 [0m
+Started GET "/" for 127.0.0.1 at 2016-11-28 06:10:19 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Parameters: {"internal"=>true}
+  Rendering /home/stas/.rvm/gems/ruby-2.3.1@models/gems/railties-5.0.0.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/stas/.rvm/gems/ruby-2.3.1@models/gems/railties-5.0.0.1/lib/rails/templates/rails/welcome/index.html.erb (7.7ms)
+Completed 200 OK in 62ms (Views: 27.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cases" for 127.0.0.1 at 2016-11-28 06:10:25 -0800
+  
+ActionController::RoutingError (uninitialized constant CasesController):
+  
+activesupport (5.0.0.1) lib/active_support/inflector/methods.rb:268:in `const_get'
+activesupport (5.0.0.1) lib/active_support/inflector/methods.rb:268:in `block in constantize'
+activesupport (5.0.0.1) lib/active_support/inflector/methods.rb:266:in `each'
+activesupport (5.0.0.1) lib/active_support/inflector/methods.rb:266:in `inject'
+activesupport (5.0.0.1) lib/active_support/inflector/methods.rb:266:in `constantize'
+actionpack (5.0.0.1) lib/action_dispatch/http/request.rb:93:in `controller_class'
+actionpack (5.0.0.1) lib/action_dispatch/routing/route_set.rb:44:in `controller'
+actionpack (5.0.0.1) lib/action_dispatch/routing/route_set.rb:30:in `serve'
+actionpack (5.0.0.1) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.0.1) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.0.1) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.0.1) lib/action_dispatch/routing/route_set.rb:725:in `call'
+rack (2.0.1) lib/rack/etag.rb:25:in `call'
+rack (2.0.1) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.1) lib/rack/head.rb:12:in `call'
+rack (2.0.1) lib/rack/session/abstract/id.rb:222:in `context'
+rack (2.0.1) lib/rack/session/abstract/id.rb:216:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.0.1) lib/active_record/migration.rb:552:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.2) lib/puma/configuration.rb:225:in `call'
+puma (3.6.2) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.2) lib/puma/server.rb:415:in `process_client'
+puma (3.6.2) lib/puma/server.rb:275:in `block in run'
+puma (3.6.2) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /home/stas/.rvm/gems/ruby-2.3.1@models/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/stas/.rvm/gems/ruby-2.3.1@models/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/stas/.rvm/gems/ruby-2.3.1@models/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.8ms)
+  Rendered collection of /home/stas/.rvm/gems/ruby-2.3.1@models/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [8 times] (34.3ms)
+  Rendered /home/stas/.rvm/gems/ruby-2.3.1@models/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (55.4ms)
+  Rendering /home/stas/.rvm/gems/ruby-2.3.1@models/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/stas/.rvm/gems/ruby-2.3.1@models/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (25.6ms)
+  Rendered /home/stas/.rvm/gems/ruby-2.3.1@models/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (248.3ms)
+Started GET "/cases/new" for 127.0.0.1 at 2016-11-28 06:10:33 -0800
+  
+ActionController::RoutingError (uninitialized constant CasesController):
+  
+activesupport (5.0.0.1) lib/active_support/inflector/methods.rb:268:in `const_get'
+activesupport (5.0.0.1) lib/active_support/inflector/methods.rb:268:in `block in constantize'
+activesupport (5.0.0.1) lib/active_support/inflector/methods.rb:266:in `each'
+activesupport (5.0.0.1) lib/active_support/inflector/methods.rb:266:in `inject'
+activesupport (5.0.0.1) lib/active_support/inflector/methods.rb:266:in `constantize'
+actionpack (5.0.0.1) lib/action_dispatch/http/request.rb:93:in `controller_class'
+actionpack (5.0.0.1) lib/action_dispatch/routing/route_set.rb:44:in `controller'
+actionpack (5.0.0.1) lib/action_dispatch/routing/route_set.rb:30:in `serve'
+actionpack (5.0.0.1) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.0.1) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.0.1) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.0.1) lib/action_dispatch/routing/route_set.rb:725:in `call'
+rack (2.0.1) lib/rack/etag.rb:25:in `call'
+rack (2.0.1) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.1) lib/rack/head.rb:12:in `call'
+rack (2.0.1) lib/rack/session/abstract/id.rb:222:in `context'
+rack (2.0.1) lib/rack/session/abstract/id.rb:216:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.0.1) lib/active_record/migration.rb:552:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.2) lib/puma/configuration.rb:225:in `call'
+puma (3.6.2) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.2) lib/puma/server.rb:415:in `process_client'
+puma (3.6.2) lib/puma/server.rb:275:in `block in run'
+puma (3.6.2) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /home/stas/.rvm/gems/ruby-2.3.1@models/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/stas/.rvm/gems/ruby-2.3.1@models/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/stas/.rvm/gems/ruby-2.3.1@models/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered collection of /home/stas/.rvm/gems/ruby-2.3.1@models/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [8 times] (2.3ms)
+  Rendered /home/stas/.rvm/gems/ruby-2.3.1@models/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.9ms)
+  Rendering /home/stas/.rvm/gems/ruby-2.3.1@models/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/stas/.rvm/gems/ruby-2.3.1@models/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/stas/.rvm/gems/ruby-2.3.1@models/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (20.3ms)
+Started GET "/cases/new" for 127.0.0.1 at 2016-11-28 06:11:03 -0800
+Processing by CasesController#new as HTML
+  Rendering cases/new.html.erb within layouts/application
+  Rendered cases/new.html.erb within layouts/application (38.8ms)
+Completed 200 OK in 998ms (Views: 996.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/cases" for 127.0.0.1 at 2016-11-28 06:11:06 -0800
+Processing by CasesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"R6xsw1ZnAiwMm/i0SszxfQfolL3ZvnjGRrsFvRkCVJ3/ptyZ+pYkgWG9sExWQwV84HNlgdv4/Y15y39bNXdJgw==", "cases"=>{"title"=>"", "text"=>""}, "commit"=>"Save Cases"}
+Completed 500 Internal Server Error in 119ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `case_params' for #<CasesController:0x000000031001f0>
+Did you mean?  case_path):
+  
+app/controllers/cases_controller.rb:16:in `create'
+  Rendering /home/stas/.rvm/gems/ruby-2.3.1@models/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/stas/.rvm/gems/ruby-2.3.1@models/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/stas/.rvm/gems/ruby-2.3.1@models/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.5ms)
+  Rendering /home/stas/.rvm/gems/ruby-2.3.1@models/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/stas/.rvm/gems/ruby-2.3.1@models/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendering /home/stas/.rvm/gems/ruby-2.3.1@models/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/stas/.rvm/gems/ruby-2.3.1@models/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/stas/.rvm/gems/ruby-2.3.1@models/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (43.7ms)
+Started POST "/cases" for 127.0.0.1 at 2016-11-28 06:11:24 -0800
+Processing by CasesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"R6xsw1ZnAiwMm/i0SszxfQfolL3ZvnjGRrsFvRkCVJ3/ptyZ+pYkgWG9sExWQwV84HNlgdv4/Y15y39bNXdJgw==", "cases"=>{"title"=>"q", "text"=>"q"}, "commit"=>"Save Cases"}
+Completed 500 Internal Server Error in 90ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `case_params' for #<CasesController:0x007f80941d9b58>
+Did you mean?  case_path):
+  
+app/controllers/cases_controller.rb:16:in `create'
+  Rendering /home/stas/.rvm/gems/ruby-2.3.1@models/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/stas/.rvm/gems/ruby-2.3.1@models/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/stas/.rvm/gems/ruby-2.3.1@models/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.6ms)
+  Rendering /home/stas/.rvm/gems/ruby-2.3.1@models/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/stas/.rvm/gems/ruby-2.3.1@models/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendering /home/stas/.rvm/gems/ruby-2.3.1@models/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/stas/.rvm/gems/ruby-2.3.1@models/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/stas/.rvm/gems/ruby-2.3.1@models/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (46.8ms)
+Started GET "/cases/new" for 127.0.0.1 at 2016-11-28 06:11:42 -0800
+Processing by CasesController#new as HTML
+  Rendering cases/new.html.erb within layouts/application
+  Rendered cases/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 17ms (Views: 16.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/cases" for 127.0.0.1 at 2016-11-28 06:11:46 -0800
+Processing by CasesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7fsfXNzvtiDJZuoxWw2e04vh9Kw/HgdzkE/LA7mIyyBV8a8GcB6QjaRAoslHgmrSbHoFkD1YgjivP7Hllf3WPg==", "cases"=>{"title"=>"w", "text"=>"w"}, "commit"=>"Save Cases"}
+Unpermitted parameter: text
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (39.3ms)[0m  [1m[32mINSERT INTO "cases" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "w"], ["created_at", 2016-11-28 14:11:46 UTC], ["updated_at", 2016-11-28 14:11:46 UTC]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/cases/1
+Completed 302 Found in 112ms (ActiveRecord: 57.2ms)
+
+
+Started GET "/cases/1" for 127.0.0.1 at 2016-11-28 06:11:46 -0800
+Processing by CasesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCase Load (0.6ms)[0m  [1m[34mSELECT  "cases".* FROM "cases" WHERE "cases"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering cases/show.html.erb within layouts/application
+  Rendered cases/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 42ms (Views: 24.6ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/cases" for 127.0.0.1 at 2016-11-28 06:13:02 -0800
+Processing by CasesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7fsfXNzvtiDJZuoxWw2e04vh9Kw/HgdzkE/LA7mIyyBV8a8GcB6QjaRAoslHgmrSbHoFkD1YgjivP7Hllf3WPg==", "cases"=>{"title"=>"w", "text"=>"w"}, "commit"=>"Save Cases"}
+Unpermitted parameter: text
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.3ms)[0m  [1m[32mINSERT INTO "cases" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "w"], ["created_at", 2016-11-28 14:13:02 UTC], ["updated_at", 2016-11-28 14:13:02 UTC]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/cases/2
+Completed 302 Found in 9ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/cases/2" for 127.0.0.1 at 2016-11-28 06:13:02 -0800
+Processing by CasesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCase Load (0.8ms)[0m  [1m[34mSELECT  "cases".* FROM "cases" WHERE "cases"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering cases/show.html.erb within layouts/application
+  Rendered cases/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 20ms (Views: 17.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/cases/2" for 127.0.0.1 at 2016-11-28 06:13:04 -0800
+Processing by CasesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCase Load (0.6ms)[0m  [1m[34mSELECT  "cases".* FROM "cases" WHERE "cases"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering cases/show.html.erb within layouts/application
+  Rendered cases/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 27ms (Views: 23.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/cases" for 127.0.0.1 at 2016-11-28 06:13:07 -0800
+Processing by CasesController#index as HTML
+  Rendering cases/index.html.erb within layouts/application
+  Rendered cases/index.html.erb within layouts/application (1.8ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/stas/test-order/app/views/cases/index.html.erb:10: syntax error, unexpected keyword_case, expecting '|'
+'.freeze;   @cases.each do |case| 
+                                ^
+/home/stas/test-order/app/views/cases/index.html.erb:12: syntax error, unexpected '.', expecting keyword_when
+...e;@output_buffer.append=( case.title );@output_buffer.safe_a...
+...                               ^
+/home/stas/test-order/app/views/cases/index.html.erb:13: syntax error, unexpected '.', expecting keyword_when
+...e;@output_buffer.append=( case.description );@output_buffer....
+...                               ^
+/home/stas/test-order/app/views/cases/index.html.erb:14: syntax error, unexpected '.', expecting keyword_when
+...e;@output_buffer.append=( case.instruction );@output_buffer....
+...                               ^
+/home/stas/test-order/app/views/cases/index.html.erb:15: syntax error, unexpected ')', expecting keyword_when
+...link_to 'Show', case_path(case) );@output_buffer.safe_append...
+...                               ^
+/home/stas/test-order/app/views/cases/index.html.erb:17: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;   end 
+               ^
+/home/stas/test-order/app/views/cases/index.html.erb:19: syntax error, unexpected keyword_ensure, expecting ')'
+/home/stas/test-order/app/views/cases/index.html.erb:21: syntax error, unexpected keyword_end, expecting ')'):
+  
+app/views/cases/index.html.erb:10: syntax error, unexpected keyword_case, expecting '|'
+app/views/cases/index.html.erb:12: syntax error, unexpected '.', expecting keyword_when
+app/views/cases/index.html.erb:13: syntax error, unexpected '.', expecting keyword_when
+app/views/cases/index.html.erb:14: syntax error, unexpected '.', expecting keyword_when
+app/views/cases/index.html.erb:15: syntax error, unexpected ')', expecting keyword_when
+app/views/cases/index.html.erb:17: syntax error, unexpected keyword_end, expecting ')'
+app/views/cases/index.html.erb:19: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/cases/index.html.erb:21: syntax error, unexpected keyword_end, expecting ')'
+  Rendering /home/stas/.rvm/gems/ruby-2.3.1@models/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/stas/.rvm/gems/ruby-2.3.1@models/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/stas/.rvm/gems/ruby-2.3.1@models/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.3ms)
+  Rendering /home/stas/.rvm/gems/ruby-2.3.1@models/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/stas/.rvm/gems/ruby-2.3.1@models/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendering /home/stas/.rvm/gems/ruby-2.3.1@models/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/stas/.rvm/gems/ruby-2.3.1@models/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/stas/.rvm/gems/ruby-2.3.1@models/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (24.2ms)
+Started GET "/cases" for 127.0.0.1 at 2016-11-28 06:16:31 -0800
+Processing by CasesController#index as HTML
+  Rendering cases/index.html.erb within layouts/application
+  Rendered cases/index.html.erb within layouts/application (3.3ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+     7:     <th>Instruction</th>
+     8:   </tr>
+     9: 
+    10:   <% @cases.each do |c| %>
+    11:       <tr>
+    12:         <td><%= c.title %></td>
+    13:         <td><%= c.description %></td>
+  
+app/views/cases/index.html.erb:10:in `_app_views_cases_index_html_erb__1788077486034860764_70095088682740'
+  Rendering /home/stas/.rvm/gems/ruby-2.3.1@models/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/stas/.rvm/gems/ruby-2.3.1@models/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/stas/.rvm/gems/ruby-2.3.1@models/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (15.1ms)
+  Rendering /home/stas/.rvm/gems/ruby-2.3.1@models/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/stas/.rvm/gems/ruby-2.3.1@models/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendering /home/stas/.rvm/gems/ruby-2.3.1@models/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/stas/.rvm/gems/ruby-2.3.1@models/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/stas/.rvm/gems/ruby-2.3.1@models/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (31.5ms)
+Started GET "/cases" for 127.0.0.1 at 2016-11-28 06:18:59 -0800
+Processing by CasesController#index as HTML
+  Rendering cases/index.html.erb within layouts/application
+  [1m[36mCase Load (2.0ms)[0m  [1m[34mSELECT "cases".* FROM "cases"[0m
+  Rendered cases/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 31ms (Views: 28.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/cases/new" for 127.0.0.1 at 2016-11-28 06:19:17 -0800
+Processing by CasesController#new as HTML
+  Rendering cases/new.html.erb within layouts/application
+  Rendered cases/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 26ms (Views: 25.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/cases" for 127.0.0.1 at 2016-11-28 06:19:21 -0800
+Processing by CasesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"E7kuYOXimMuuxtth6idXXjjwFuFPmIS2PSOVVOsNkours546SRO+ZsPgk5n2qKNf32vn3U3eAf0CU++yx3iPlQ==", "cases"=>{"title"=>"g", "text"=>"g"}, "commit"=>"Save Cases"}
+Unpermitted parameter: text
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.4ms)[0m  [1m[32mINSERT INTO "cases" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "g"], ["created_at", 2016-11-28 14:19:21 UTC], ["updated_at", 2016-11-28 14:19:21 UTC]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/cases/3
+Completed 302 Found in 8ms (ActiveRecord: 3.7ms)
+
+
+Started GET "/cases/3" for 127.0.0.1 at 2016-11-28 06:19:21 -0800
+Processing by CasesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCase Load (0.3ms)[0m  [1m[34mSELECT  "cases".* FROM "cases" WHERE "cases"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering cases/show.html.erb within layouts/application
+  Rendered cases/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 22ms (Views: 19.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/cases" for 127.0.0.1 at 2016-11-28 06:19:25 -0800
+Processing by CasesController#index as HTML
+  Rendering cases/index.html.erb within layouts/application
+  [1m[36mCase Load (0.8ms)[0m  [1m[34mSELECT "cases".* FROM "cases"[0m
+  Rendered cases/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 85ms (Views: 82.4ms | ActiveRecord: 0.8ms)
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                         

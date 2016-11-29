@@ -1,0 +1,18 @@
+<h1>Cases</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Instruction</th>
+  </tr>
+
+  <% @case.each do |c| %>
+      <tr>
+        <td><%= c.title %></td>
+        <td><%= c.description %></td>
+        <td><%= c.instruction %></td>
+
+      </tr>
+  <% end %>
+</table>
