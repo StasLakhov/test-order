@@ -1,7 +1,7 @@
 class TcasesController < ApplicationController
 
   def  index
-    @tcase = Tcase.all
+    @tcases = Tcase.all
   end
 
   def show
@@ -16,8 +16,12 @@ class TcasesController < ApplicationController
   def create
     @tcase = Tcase.new(tcase_params)
 
-    @tcase.save
-    redirect_to @tcase
+    if @tcase.save
+      redirect_to @tcase
+
+    else
+      render 'edit'
+    end
 
   end
 
@@ -27,6 +31,14 @@ class TcasesController < ApplicationController
   end
 
   def update
+    @tcase = Tcase.find(params[:id])
+
+    if @tcase.update(tcase_params)
+      redirect_to @tcase
+
+    else
+      render 'edit'
+    end
 
   end
 
