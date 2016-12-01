@@ -16,11 +16,10 @@ class TcasesController < ApplicationController
   def create
     @tcase = Tcase.new(tcase_params)
 
-    if @tcase.save
+    if @tcase.save(tcase_params)
       redirect_to @tcase
-
     else
-      render 'edit'
+      render 'new'
     end
 
   end
