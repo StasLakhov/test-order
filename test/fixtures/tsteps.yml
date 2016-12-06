@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  expresult: MyString
+  envir: 
+  author: MyString
+
+two:
+  expresult: MyString
+  envir: 
+  author: MyString

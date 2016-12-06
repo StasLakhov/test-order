@@ -5034,3 +5034,944 @@ Processing by TcasesController#index as HTML
 Completed 200 OK in 14ms (Views: 13.0ms | ActiveRecord: 0.3ms)
 
 
+Started GET "/tcases" for 127.0.0.1 at 2016-12-01 05:36:54 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by TcasesController#index as HTML
+  Rendering tcases/index.html.erb within layouts/application
+  [1m[36mTcase Load (0.5ms)[0m  [1m[34mSELECT "tcases".* FROM "tcases"[0m
+  Rendered tcases/index.html.erb within layouts/application (18.9ms)
+Completed 200 OK in 246ms (Views: 233.3ms | ActiveRecord: 2.8ms)
+
+
+Started DELETE "/tcases/2" for 127.0.0.1 at 2016-12-01 05:36:57 -0800
+Processing by TcasesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"uMcKLU4D7TXZDmOq56+MiMeGdGf7x1yLoChimJv1v+fe5cJsGLIBw46ojLMBUS7z0/vsOp19l3n8P2QhysrzIQ==", "id"=>"2"}
+  [1m[36mTcase Load (1.7ms)[0m  [1m[34mSELECT  "tcases".* FROM "tcases" WHERE "tcases"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "tcases" WHERE "tcases"."id" = $1[0m  [["id", 2]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/tcases
+Completed 302 Found in 16ms (ActiveRecord: 3.2ms)
+
+
+Started GET "/tcases" for 127.0.0.1 at 2016-12-01 05:36:57 -0800
+Processing by TcasesController#index as HTML
+  Rendering tcases/index.html.erb within layouts/application
+  [1m[36mTcase Load (0.6ms)[0m  [1m[34mSELECT "tcases".* FROM "tcases"[0m
+  Rendered tcases/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 21ms (Views: 18.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/tcases/new" for 127.0.0.1 at 2016-12-01 05:43:05 -0800
+Processing by TcasesController#new as HTML
+  Rendering tcases/new.html.erb within layouts/application
+  Rendered tcases/new.html.erb within layouts/application (50.8ms)
+Completed 200 OK in 68ms (Views: 66.2ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[35m (223.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "torder"[0m
+  [1m[35m (717.7ms)[0m  [1m[35mCREATE DATABASE "torder" ENCODING = 'unicode'[0m
+  [1m[35m (17.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying PRIMARY KEY)[0m
+  [1m[35m (7.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(636616294596855405);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateTcases (20161128134556)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (6.7ms)[0m  [1m[35mCREATE TABLE "tcases" ("id" serial primary key, "title" character varying, "description" character varying, "instruction" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20161128134556"]]
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", 2016-12-01 14:06:56 UTC], ["updated_at", 2016-12-01 14:06:56 UTC]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(636616294596855405)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (3.1ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'tcases'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+Started GET "/tcases" for 127.0.0.1 at 2016-12-01 06:07:12 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by TcasesController#index as HTML
+  Rendering tcases/index.html.erb within layouts/application
+  [1m[36mTcase Load (0.6ms)[0m  [1m[34mSELECT "tcases".* FROM "tcases"[0m
+  Rendered tcases/index.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 254ms (Views: 243.4ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/tcases/new" for 127.0.0.1 at 2016-12-01 06:24:20 -0800
+Processing by TcasesController#new as HTML
+  Rendering tcases/new.html.erb within layouts/application
+  Rendered tcases/new.html.erb within layouts/application (34.2ms)
+Completed 200 OK in 82ms (Views: 65.8ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/tcases/new" for 127.0.0.1 at 2016-12-01 06:26:24 -0800
+Processing by TcasesController#new as HTML
+  Rendering tcases/new.html.erb within layouts/application
+  Rendered tcases/new.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 49ms (Views: 47.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tcases" for 127.0.0.1 at 2016-12-01 06:29:18 -0800
+Processing by TcasesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"P9wV2q/zNdY0WSepVRjfiOz/IGzFTRJzNqCQtiV28kLuFe367uAcQNt+7p8K0W0beiUBGZPVfB0Fi3+U56TKag==", "tcase"=>{"title"=>"Log In", "description"=>"User should log in the app in case correct credentials", "instruction"=>""}, "commit"=>"Create Tcase"}
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (24.6ms)[0m  [1m[32mINSERT INTO "tcases" ("title", "description", "instruction", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Log In"], ["description", "User should log in the app in case correct credentials"], ["instruction", ""], ["created_at", 2016-12-01 14:29:18 UTC], ["updated_at", 2016-12-01 14:29:18 UTC]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/tcases/1
+Completed 302 Found in 34ms (ActiveRecord: 26.3ms)
+
+
+Started GET "/tcases/1" for 127.0.0.1 at 2016-12-01 06:29:18 -0800
+Processing by TcasesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTcase Load (1.7ms)[0m  [1m[34mSELECT  "tcases".* FROM "tcases" WHERE "tcases"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tcases/show.html.erb within layouts/application
+  Rendered tcases/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 25ms (Views: 14.8ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/tcases" for 127.0.0.1 at 2016-12-01 06:29:22 -0800
+Processing by TcasesController#index as HTML
+  Rendering tcases/index.html.erb within layouts/application
+  [1m[36mTcase Load (0.7ms)[0m  [1m[34mSELECT "tcases".* FROM "tcases"[0m
+  Rendered tcases/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 16ms (Views: 13.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/tcases/1/edit" for 127.0.0.1 at 2016-12-01 06:30:03 -0800
+Processing by TcasesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTcase Load (0.3ms)[0m  [1m[34mSELECT  "tcases".* FROM "tcases" WHERE "tcases"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tcases/edit.html.erb within layouts/application
+  Rendered tcases/edit.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 19ms (Views: 16.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/tcases" for 127.0.0.1 at 2016-12-01 06:30:53 -0800
+Processing by TcasesController#index as HTML
+  Rendering tcases/index.html.erb within layouts/application
+  [1m[36mTcase Load (1.1ms)[0m  [1m[34mSELECT "tcases".* FROM "tcases"[0m
+  Rendered tcases/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 27ms (Views: 24.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/tcases" for 127.0.0.1 at 2016-12-01 06:30:56 -0800
+Processing by TcasesController#index as HTML
+  Rendering tcases/index.html.erb within layouts/application
+  [1m[36mTcase Load (0.7ms)[0m  [1m[34mSELECT "tcases".* FROM "tcases"[0m
+  Rendered tcases/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 24ms (Views: 21.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/tcases" for 127.0.0.1 at 2016-12-01 06:31:06 -0800
+Processing by TcasesController#index as HTML
+  Rendering tcases/index.html.erb within layouts/application
+  [1m[36mTcase Load (0.6ms)[0m  [1m[34mSELECT "tcases".* FROM "tcases"[0m
+  Rendered tcases/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 17ms (Views: 15.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/tcases" for 127.0.0.1 at 2016-12-01 06:31:08 -0800
+Processing by TcasesController#index as HTML
+  Rendering tcases/index.html.erb within layouts/application
+  [1m[36mTcase Load (0.6ms)[0m  [1m[34mSELECT "tcases".* FROM "tcases"[0m
+  Rendered tcases/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 23ms (Views: 20.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/tcases" for 127.0.0.1 at 2016-12-01 06:33:32 -0800
+Processing by TcasesController#index as HTML
+  Rendering tcases/index.html.erb within layouts/application
+  [1m[36mTcase Load (0.8ms)[0m  [1m[34mSELECT "tcases".* FROM "tcases"[0m
+  Rendered tcases/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 31ms (Views: 29.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/tcases/new" for 127.0.0.1 at 2016-12-01 06:35:17 -0800
+Processing by TcasesController#new as HTML
+  Rendering tcases/new.html.erb within layouts/application
+  Rendered tcases/new.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 35ms (Views: 33.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tcases" for 127.0.0.1 at 2016-12-01 06:35:22 -0800
+Processing by TcasesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rUOsoXXYXyf/LrG44QiNuKNLD4QslyQeCHpkWG+NOgR8ilSBNMt2sRAJeI6+wT8rNZEu8XoPSnA7UYt6rV8CLA==", "tcase"=>{"title"=>"login", "description"=>"", "instruction"=>""}, "commit"=>"Create Tcase"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[32mINSERT INTO "tcases" ("title", "description", "instruction", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "login"], ["description", ""], ["instruction", ""], ["created_at", 2016-12-01 14:35:22 UTC], ["updated_at", 2016-12-01 14:35:22 UTC]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/tcases/2
+Completed 302 Found in 13ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/tcases/2" for 127.0.0.1 at 2016-12-01 06:35:22 -0800
+Processing by TcasesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTcase Load (0.3ms)[0m  [1m[34mSELECT  "tcases".* FROM "tcases" WHERE "tcases"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering tcases/show.html.erb within layouts/application
+  Rendered tcases/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 20ms (Views: 18.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/tcases" for 127.0.0.1 at 2016-12-01 06:35:24 -0800
+Processing by TcasesController#index as HTML
+  Rendering tcases/index.html.erb within layouts/application
+  [1m[36mTcase Load (0.7ms)[0m  [1m[34mSELECT "tcases".* FROM "tcases"[0m
+  Rendered tcases/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 24ms (Views: 22.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/tcases/new" for 127.0.0.1 at 2016-12-01 06:35:27 -0800
+Processing by TcasesController#new as HTML
+  Rendering tcases/new.html.erb within layouts/application
+  Rendered tcases/new.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 35ms (Views: 33.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tcases" for 127.0.0.1 at 2016-12-01 06:35:30 -0800
+Processing by TcasesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RmNuTpT6+LHAVxjVHBeDUDfibeZzl+dd8Dd1Ui8oZCyXqpZu1enRJy9w0eND3jHDoThMkyUPiTPDHJpw7fpcBA==", "tcase"=>{"title"=>"", "description"=>"fff", "instruction"=>"fff"}, "commit"=>"Create Tcase"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "tcases" ("title", "description", "instruction", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", ""], ["description", "fff"], ["instruction", "fff"], ["created_at", 2016-12-01 14:35:30 UTC], ["updated_at", 2016-12-01 14:35:30 UTC]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/tcases/3
+Completed 302 Found in 7ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/tcases/3" for 127.0.0.1 at 2016-12-01 06:35:30 -0800
+Processing by TcasesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTcase Load (0.3ms)[0m  [1m[34mSELECT  "tcases".* FROM "tcases" WHERE "tcases"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering tcases/show.html.erb within layouts/application
+  Rendered tcases/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 17ms (Views: 16.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tcases" for 127.0.0.1 at 2016-12-01 06:35:31 -0800
+Processing by TcasesController#index as HTML
+  Rendering tcases/index.html.erb within layouts/application
+  [1m[36mTcase Load (0.6ms)[0m  [1m[34mSELECT "tcases".* FROM "tcases"[0m
+  Rendered tcases/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 33ms (Views: 29.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/tcases" for 127.0.0.1 at 2016-12-01 06:35:35 -0800
+Processing by TcasesController#index as HTML
+  Rendering tcases/index.html.erb within layouts/application
+  [1m[36mTcase Load (0.4ms)[0m  [1m[34mSELECT "tcases".* FROM "tcases"[0m
+  Rendered tcases/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 19ms (Views: 16.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tcases/1/edit" for 127.0.0.1 at 2016-12-01 06:35:44 -0800
+Processing by TcasesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTcase Load (1.8ms)[0m  [1m[34mSELECT  "tcases".* FROM "tcases" WHERE "tcases"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tcases/edit.html.erb within layouts/application
+  Rendered tcases/edit.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 35ms (Views: 29.1ms | ActiveRecord: 2.3ms)
+
+
+Started PATCH "/tcases/1" for 127.0.0.1 at 2016-12-01 06:35:48 -0800
+Processing by TcasesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2+2Rcn7DSOALJHwiRjDDrHW+OPYce9Tbu0IlyxZy+MDtVeZ/Gdt3gC+Fh2gRJWMPwRyNQCVwJ3Rw8WnOJjWSHA==", "tcase"=>{"title"=>"Log In", "description"=>" correct credentials", "instruction"=>""}, "commit"=>"Update Tcase", "id"=>"1"}
+  [1m[36mTcase Load (0.9ms)[0m  [1m[34mSELECT  "tcases".* FROM "tcases" WHERE "tcases"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[33mUPDATE "tcases" SET "description" = $1, "updated_at" = $2 WHERE "tcases"."id" = $3[0m  [["description", " correct credentials"], ["updated_at", 2016-12-01 14:35:48 UTC], ["id", 1]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/tcases/1
+Completed 302 Found in 11ms (ActiveRecord: 3.1ms)
+
+
+Started GET "/tcases/1" for 127.0.0.1 at 2016-12-01 06:35:48 -0800
+Processing by TcasesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTcase Load (0.5ms)[0m  [1m[34mSELECT  "tcases".* FROM "tcases" WHERE "tcases"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tcases/show.html.erb within layouts/application
+  Rendered tcases/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 19ms (Views: 16.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/tcases" for 127.0.0.1 at 2016-12-01 06:35:50 -0800
+Processing by TcasesController#index as HTML
+  Rendering tcases/index.html.erb within layouts/application
+  [1m[36mTcase Load (0.4ms)[0m  [1m[34mSELECT "tcases".* FROM "tcases"[0m
+  Rendered tcases/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 29ms (Views: 27.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tcases/1/edit" for 127.0.0.1 at 2016-12-01 06:36:01 -0800
+Processing by TcasesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTcase Load (1.2ms)[0m  [1m[34mSELECT  "tcases".* FROM "tcases" WHERE "tcases"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tcases/edit.html.erb within layouts/application
+  Rendered tcases/edit.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 48ms (Views: 39.6ms | ActiveRecord: 2.2ms)
+
+
+Started DELETE "/tcases/1" for 127.0.0.1 at 2016-12-01 06:36:06 -0800
+Processing by TcasesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"a5k20DDxkN9nGiOvd1+rERobV1kIptAzyVDixZX7tqcNu/6RZkB8KTC8zLaRoQlqDmbPBG4cG8GVR+R8xMT6YQ==", "id"=>"1"}
+  [1m[36mTcase Load (0.4ms)[0m  [1m[34mSELECT  "tcases".* FROM "tcases" WHERE "tcases"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "tcases" WHERE "tcases"."id" = $1[0m  [["id", 1]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/tcases
+Completed 302 Found in 5ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/tcases" for 127.0.0.1 at 2016-12-01 06:36:06 -0800
+Processing by TcasesController#index as HTML
+  Rendering tcases/index.html.erb within layouts/application
+  [1m[36mTcase Load (0.4ms)[0m  [1m[34mSELECT "tcases".* FROM "tcases"[0m
+  Rendered tcases/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 17ms (Views: 15.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tcases/new" for 127.0.0.1 at 2016-12-01 06:36:14 -0800
+Processing by TcasesController#new as HTML
+  Rendering tcases/new.html.erb within layouts/application
+  Rendered tcases/new.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 44ms (Views: 42.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tcases" for 127.0.0.1 at 2016-12-01 06:36:17 -0800
+Processing by TcasesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OX3YjG0RDdQ1Z9l2/IAK3YyaEiLwYguSStzdZWvh8mTotCCsLAIkQtpAEECjSbhOGkAzV6b6Zfx59zJHqTPKTA==", "tcase"=>{"title"=>"", "description"=>"ggg", "instruction"=>"ggg"}, "commit"=>"Create Tcase"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "tcases" ("title", "description", "instruction", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", ""], ["description", "ggg"], ["instruction", "ggg"], ["created_at", 2016-12-01 14:36:17 UTC], ["updated_at", 2016-12-01 14:36:17 UTC]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/tcases/4
+Completed 302 Found in 6ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/tcases/4" for 127.0.0.1 at 2016-12-01 06:36:17 -0800
+Processing by TcasesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTcase Load (0.5ms)[0m  [1m[34mSELECT  "tcases".* FROM "tcases" WHERE "tcases"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering tcases/show.html.erb within layouts/application
+  Rendered tcases/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 29ms (Views: 27.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/tcases" for 127.0.0.1 at 2016-12-01 06:36:18 -0800
+Processing by TcasesController#index as HTML
+  Rendering tcases/index.html.erb within layouts/application
+  [1m[36mTcase Load (0.3ms)[0m  [1m[34mSELECT "tcases".* FROM "tcases"[0m
+  Rendered tcases/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 18ms (Views: 17.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tcases/new" for 127.0.0.1 at 2016-12-01 06:36:22 -0800
+Processing by TcasesController#new as HTML
+  Rendering tcases/new.html.erb within layouts/application
+  Rendered tcases/new.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 37ms (Views: 35.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tcases" for 127.0.0.1 at 2016-12-01 06:36:26 -0800
+Processing by TcasesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"P7t34sdmcyBYNUJJd4VUkeOELiOMfp9T5z9pbmqIA8Luco/ChnVatrcSi38oTOYCdV4PVtrm8T3UFIZMqFo76g==", "tcase"=>{"title"=>"", "description"=>"hhh", "instruction"=>"hhh"}, "commit"=>"Create Tcase"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "tcases" ("title", "description", "instruction", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", ""], ["description", "hhh"], ["instruction", "hhh"], ["created_at", 2016-12-01 14:36:26 UTC], ["updated_at", 2016-12-01 14:36:26 UTC]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/tcases/5
+Completed 302 Found in 6ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/tcases/5" for 127.0.0.1 at 2016-12-01 06:36:26 -0800
+Processing by TcasesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mTcase Load (0.5ms)[0m  [1m[34mSELECT  "tcases".* FROM "tcases" WHERE "tcases"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering tcases/show.html.erb within layouts/application
+  Rendered tcases/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 20ms (Views: 17.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/tcases" for 127.0.0.1 at 2016-12-01 06:36:27 -0800
+Processing by TcasesController#index as HTML
+  Rendering tcases/index.html.erb within layouts/application
+  [1m[36mTcase Load (0.6ms)[0m  [1m[34mSELECT "tcases".* FROM "tcases"[0m
+  Rendered tcases/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 24ms (Views: 22.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/tcases/new" for 127.0.0.1 at 2016-12-01 06:36:49 -0800
+Processing by TcasesController#new as HTML
+  Rendering tcases/new.html.erb within layouts/application
+  Rendered tcases/new.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 34ms (Views: 32.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tcases" for 127.0.0.1 at 2016-12-01 06:36:55 -0800
+Processing by TcasesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TJ63QCovjmdC1lt0PSByQB0enJ466A6wMoS63WMLim6dV09gazyn8a3xkkJi6cDTi8S962xwYN4Br1X/odmyRg==", "tcase"=>{"title"=>"jjj", "description"=>"jjj", "instruction"=>"jjj"}, "commit"=>"Create Tcase"}
+  [1m[35m (2.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "tcases" ("title", "description", "instruction", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "jjj"], ["description", "jjj"], ["instruction", "jjj"], ["created_at", 2016-12-01 14:36:55 UTC], ["updated_at", 2016-12-01 14:36:55 UTC]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/tcases/6
+Completed 302 Found in 11ms (ActiveRecord: 5.1ms)
+
+
+Started GET "/tcases/6" for 127.0.0.1 at 2016-12-01 06:36:55 -0800
+Processing by TcasesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mTcase Load (0.6ms)[0m  [1m[34mSELECT  "tcases".* FROM "tcases" WHERE "tcases"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering tcases/show.html.erb within layouts/application
+  Rendered tcases/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 20ms (Views: 16.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/tcases" for 127.0.0.1 at 2016-12-01 06:36:56 -0800
+Processing by TcasesController#index as HTML
+  Rendering tcases/index.html.erb within layouts/application
+  [1m[36mTcase Load (0.4ms)[0m  [1m[34mSELECT "tcases".* FROM "tcases"[0m
+  Rendered tcases/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 17ms (Views: 16.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tcases/6/edit" for 127.0.0.1 at 2016-12-01 06:36:59 -0800
+Processing by TcasesController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mTcase Load (1.1ms)[0m  [1m[34mSELECT  "tcases".* FROM "tcases" WHERE "tcases"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering tcases/edit.html.erb within layouts/application
+  Rendered tcases/edit.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 40ms (Views: 35.1ms | ActiveRecord: 1.1ms)
+
+
+Started PATCH "/tcases/6" for 127.0.0.1 at 2016-12-01 06:37:01 -0800
+Processing by TcasesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GqwAhBCuwGdqkafB+9MNsYUgxpFS3QXtJUXZtUbtvSSnN9d26b6laaMi1qPlP9pVffLh8GVI9qquQDJtLbIh8g==", "tcase"=>{"title"=>"jjj", "description"=>"jjj", "instruction"=>"jjj"}, "commit"=>"Update Tcase", "id"=>"6"}
+  [1m[36mTcase Load (0.8ms)[0m  [1m[34mSELECT  "tcases".* FROM "tcases" WHERE "tcases"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/tcases/6
+Completed 302 Found in 7ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/tcases/6" for 127.0.0.1 at 2016-12-01 06:37:01 -0800
+Processing by TcasesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mTcase Load (0.3ms)[0m  [1m[34mSELECT  "tcases".* FROM "tcases" WHERE "tcases"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering tcases/show.html.erb within layouts/application
+  Rendered tcases/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 28ms (Views: 25.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tcases" for 127.0.0.1 at 2016-12-01 06:37:04 -0800
+Processing by TcasesController#index as HTML
+  Rendering tcases/index.html.erb within layouts/application
+  [1m[36mTcase Load (0.5ms)[0m  [1m[34mSELECT "tcases".* FROM "tcases"[0m
+  Rendered tcases/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 35ms (Views: 31.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/tcases/6/edit" for 127.0.0.1 at 2016-12-01 06:37:05 -0800
+Processing by TcasesController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mTcase Load (0.5ms)[0m  [1m[34mSELECT  "tcases".* FROM "tcases" WHERE "tcases"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering tcases/edit.html.erb within layouts/application
+  Rendered tcases/edit.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 23ms (Views: 20.3ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/tcases/6" for 127.0.0.1 at 2016-12-01 06:37:11 -0800
+Processing by TcasesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"L0Sv3i8Gzk4L15a/dEKYtPjOj9rD/9KtgMmkEf734KGS33gs1harQMJk591qrk9QAByou/RqIeoLzE/Jlah8dw==", "tcase"=>{"title"=>"", "description"=>"jjj", "instruction"=>"jjj"}, "commit"=>"Update Tcase", "id"=>"6"}
+  [1m[36mTcase Load (0.9ms)[0m  [1m[34mSELECT  "tcases".* FROM "tcases" WHERE "tcases"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[33mUPDATE "tcases" SET "title" = $1, "updated_at" = $2 WHERE "tcases"."id" = $3[0m  [["title", ""], ["updated_at", 2016-12-01 14:37:11 UTC], ["id", 6]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/tcases/6
+Completed 302 Found in 11ms (ActiveRecord: 3.9ms)
+
+
+Started GET "/tcases/6" for 127.0.0.1 at 2016-12-01 06:37:11 -0800
+Processing by TcasesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mTcase Load (0.5ms)[0m  [1m[34mSELECT  "tcases".* FROM "tcases" WHERE "tcases"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering tcases/show.html.erb within layouts/application
+  Rendered tcases/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 19ms (Views: 17.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/tcases" for 127.0.0.1 at 2016-12-01 06:37:14 -0800
+Processing by TcasesController#index as HTML
+  Rendering tcases/index.html.erb within layouts/application
+  [1m[36mTcase Load (0.6ms)[0m  [1m[34mSELECT "tcases".* FROM "tcases"[0m
+  Rendered tcases/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 28ms (Views: 24.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/tcases/new" for 127.0.0.1 at 2016-12-05 00:57:41 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (12.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by TcasesController#new as HTML
+  Rendering tcases/new.html.erb within layouts/application
+  Rendered tcases/new.html.erb within layouts/application (57.3ms)
+Completed 200 OK in 635ms (Views: 574.7ms | ActiveRecord: 14.0ms)
+
+
+Started GET "/tcases" for 127.0.0.1 at 2016-12-05 00:57:47 -0800
+Processing by TcasesController#index as HTML
+  Rendering tcases/index.html.erb within layouts/application
+  [1m[36mTcase Load (19.8ms)[0m  [1m[34mSELECT "tcases".* FROM "tcases"[0m
+  Rendered tcases/index.html.erb within layouts/application (23.3ms)
+Completed 200 OK in 51ms (Views: 18.4ms | ActiveRecord: 19.8ms)
+
+
+  [1m[35m (6.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(636616294596855405);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (6.8ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (26.8ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(636616294596855405)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'tcases'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(636616294596855405);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(636616294596855405)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'tcases'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[35m (267.4ms)[0m  [1m[35mDROP DATABASE IF EXISTS "torder"[0m
+  [1m[35m (25.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying PRIMARY KEY)[0m
+  [1m[35m (22.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(636616294596855405);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateTcases (20161128134556)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (8.5ms)[0m  [1m[35mCREATE TABLE "tcases" ("id" serial primary key, "title" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20161128134556"]]
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", 2016-12-06 12:46:17 UTC], ["updated_at", 2016-12-06 12:46:17 UTC]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(636616294596855405)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'tcases'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+Started GET "/tcases" for 127.0.0.1 at 2016-12-06 04:47:54 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by TcasesController#index as HTML
+  Rendering tcases/index.html.erb within layouts/application
+  [1m[36mTcase Load (0.9ms)[0m  [1m[34mSELECT "tcases".* FROM "tcases"[0m
+  Rendered tcases/index.html.erb within layouts/application (38.2ms)
+Completed 200 OK in 862ms (Views: 773.3ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/tcases/new" for 127.0.0.1 at 2016-12-06 04:47:58 -0800
+Processing by TcasesController#new as HTML
+  Rendering tcases/new.html.erb within layouts/application
+  Rendered tcases/new.html.erb within layouts/application (72.2ms)
+Completed 200 OK in 115ms (Views: 108.8ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/tcases" for 127.0.0.1 at 2016-12-06 04:48:03 -0800
+Processing by TcasesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vZQaBi9PqQ2kyhI21PnirK97yhz3HA47zEaCtPxj5yWK73kdhpg0AdlZsCN+3uqsD56pm2LJtY007DbRHvO2wg==", "tcase"=>{"title"=>""}, "commit"=>"Create Tcase"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "tcases" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", ""], ["created_at", 2016-12-06 12:48:03 UTC], ["updated_at", 2016-12-06 12:48:03 UTC]]
+  [1m[35m (11.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/tcases/1
+Completed 302 Found in 28ms (ActiveRecord: 12.9ms)
+
+
+Started GET "/tcases/1" for 127.0.0.1 at 2016-12-06 04:48:03 -0800
+Processing by TcasesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTcase Load (0.5ms)[0m  [1m[34mSELECT  "tcases".* FROM "tcases" WHERE "tcases"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tcases/show.html.erb within layouts/application
+  Rendered tcases/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 111ms (Views: 41.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/tcases" for 127.0.0.1 at 2016-12-06 04:48:07 -0800
+Processing by TcasesController#index as HTML
+  Rendering tcases/index.html.erb within layouts/application
+  [1m[36mTcase Load (0.3ms)[0m  [1m[34mSELECT "tcases".* FROM "tcases"[0m
+  Rendered tcases/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 24ms (Views: 21.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tcases" for 127.0.0.1 at 2016-12-06 04:48:36 -0800
+Processing by TcasesController#index as HTML
+  Rendering tcases/index.html.erb within layouts/application
+  [1m[36mTcase Load (0.6ms)[0m  [1m[34mSELECT "tcases".* FROM "tcases"[0m
+  Rendered tcases/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 24ms (Views: 22.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/tcases" for 127.0.0.1 at 2016-12-06 04:48:40 -0800
+Processing by TcasesController#index as HTML
+  Rendering tcases/index.html.erb within layouts/application
+  [1m[36mTcase Load (1.2ms)[0m  [1m[34mSELECT "tcases".* FROM "tcases"[0m
+  Rendered tcases/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 28ms (Views: 24.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/tcases" for 127.0.0.1 at 2016-12-06 04:48:54 -0800
+Processing by TcasesController#index as HTML
+  Rendering tcases/index.html.erb within layouts/application
+  [1m[36mTcase Load (0.8ms)[0m  [1m[34mSELECT "tcases".* FROM "tcases"[0m
+  Rendered tcases/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 21ms (Views: 19.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/tcases" for 127.0.0.1 at 2016-12-06 04:48:56 -0800
+Processing by TcasesController#index as HTML
+  Rendering tcases/index.html.erb within layouts/application
+  [1m[36mTcase Load (1.6ms)[0m  [1m[34mSELECT "tcases".* FROM "tcases"[0m
+  Rendered tcases/index.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 29ms (Views: 25.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/tcases/1/edit" for 127.0.0.1 at 2016-12-06 04:49:00 -0800
+Processing by TcasesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTcase Load (0.4ms)[0m  [1m[34mSELECT  "tcases".* FROM "tcases" WHERE "tcases"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tcases/edit.html.erb within layouts/application
+  Rendered tcases/edit.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 25ms (Views: 22.1ms | ActiveRecord: 0.8ms)
+
+
+Started PATCH "/tcases/1" for 127.0.0.1 at 2016-12-06 04:49:04 -0800
+Processing by TcasesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rDTaZr4mjE4WlipBiuuSnGVaCoyEaVzXviJYoZv4wCqBciOXSGq0FJEx0jmCef5aKdsPS+VoeIJnitRg5d1Niw==", "tcase"=>{"title"=>"qqq"}, "commit"=>"Update Tcase", "id"=>"1"}
+  [1m[36mTcase Load (0.9ms)[0m  [1m[34mSELECT  "tcases".* FROM "tcases" WHERE "tcases"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[33mUPDATE "tcases" SET "title" = $1, "updated_at" = $2 WHERE "tcases"."id" = $3[0m  [["title", "qqq"], ["updated_at", 2016-12-06 12:49:04 UTC], ["id", 1]]
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/tcases/1
+Completed 302 Found in 18ms (ActiveRecord: 5.7ms)
+
+
+Started GET "/tcases/1" for 127.0.0.1 at 2016-12-06 04:49:04 -0800
+Processing by TcasesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTcase Load (3.4ms)[0m  [1m[34mSELECT  "tcases".* FROM "tcases" WHERE "tcases"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tcases/show.html.erb within layouts/application
+  Rendered tcases/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 23ms (Views: 16.4ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/tcases" for 127.0.0.1 at 2016-12-06 04:49:07 -0800
+Processing by TcasesController#index as HTML
+  Rendering tcases/index.html.erb within layouts/application
+  [1m[36mTcase Load (0.8ms)[0m  [1m[34mSELECT "tcases".* FROM "tcases"[0m
+  Rendered tcases/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 40ms (Views: 37.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/tcases" for 127.0.0.1 at 2016-12-06 04:49:07 -0800
+Processing by TcasesController#index as HTML
+  Rendering tcases/index.html.erb within layouts/application
+  [1m[36mTcase Load (0.5ms)[0m  [1m[34mSELECT "tcases".* FROM "tcases"[0m
+  Rendered tcases/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 18ms (Views: 16.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/tcases/new" for 127.0.0.1 at 2016-12-06 04:53:06 -0800
+Processing by TcasesController#new as HTML
+  Rendering tcases/new.html.erb within layouts/application
+  Rendered tcases/new.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 48ms (Views: 45.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tcases/new" for 127.0.0.1 at 2016-12-06 05:13:11 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by TcasesController#new as HTML
+  Rendering tcases/new.html.erb within layouts/application
+  Rendered tcases/new.html.erb within layouts/application (17.1ms)
+Completed 200 OK in 307ms (Views: 284.1ms | ActiveRecord: 5.3ms)
+
+
+Started POST "/tcases" for 127.0.0.1 at 2016-12-06 05:13:24 -0800
+Processing by TcasesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6RlINB9Oy5SdXDrAEsdnbhCq6POtom/K6YhOoHuAdK4xOA0SGATGW+XBv4BhXJUwQPD9SfVA36lvdynj6MZKeA==", "tcase"=>{"title"=>"Log In"}, "commit"=>"Create Tcase"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.4ms)[0m  [1m[32mINSERT INTO "tcases" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "Log In"], ["created_at", 2016-12-06 13:13:24 UTC], ["updated_at", 2016-12-06 13:13:24 UTC]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/tcases/2
+Completed 302 Found in 12ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/tcases/2" for 127.0.0.1 at 2016-12-06 05:13:24 -0800
+Processing by TcasesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTcase Load (0.4ms)[0m  [1m[34mSELECT  "tcases".* FROM "tcases" WHERE "tcases"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering tcases/show.html.erb within layouts/application
+  Rendered tcases/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 57ms (Views: 48.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/tcases" for 127.0.0.1 at 2016-12-06 05:13:29 -0800
+Processing by TcasesController#index as HTML
+  Rendering tcases/index.html.erb within layouts/application
+  [1m[36mTcase Load (0.5ms)[0m  [1m[34mSELECT "tcases".* FROM "tcases"[0m
+  Rendered tcases/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 40ms (Views: 39.0ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/tcases/1" for 127.0.0.1 at 2016-12-06 05:13:33 -0800
+Processing by TcasesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"nL4ooQnvFUGtZ4hDQ6PIdEEOtJ4IDYMgArhbhyeJ3RxEn22HDqUYjtX6DQMwODoqEVShJFDvM0OERzzEtM/jyg==", "id"=>"1"}
+  [1m[36mTcase Load (0.5ms)[0m  [1m[34mSELECT  "tcases".* FROM "tcases" WHERE "tcases"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "tcases" WHERE "tcases"."id" = $1[0m  [["id", 1]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/tcases
+Completed 302 Found in 5ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/tcases" for 127.0.0.1 at 2016-12-06 05:13:33 -0800
+Processing by TcasesController#index as HTML
+  Rendering tcases/index.html.erb within layouts/application
+  [1m[36mTcase Load (0.7ms)[0m  [1m[34mSELECT "tcases".* FROM "tcases"[0m
+  Rendered tcases/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 28ms (Views: 26.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/tcases/new" for 127.0.0.1 at 2016-12-06 05:13:45 -0800
+Processing by TcasesController#new as HTML
+  Rendering tcases/new.html.erb within layouts/application
+  Rendered tcases/new.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 36ms (Views: 33.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tcases" for 127.0.0.1 at 2016-12-06 05:13:51 -0800
+Processing by TcasesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"souSrZA1MjLPWRgcX87n3+41kFsfvRKzLUdCal/jIv6F8PG2OeKvPrLKugn16e/fTtDz3IpoqQXV7fYPvXNzGQ==", "tcase"=>{"title"=>"Log Out"}, "commit"=>"Create Tcase"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "tcases" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "Log Out"], ["created_at", 2016-12-06 13:13:51 UTC], ["updated_at", 2016-12-06 13:13:51 UTC]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/tcases/3
+Completed 302 Found in 10ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/tcases/3" for 127.0.0.1 at 2016-12-06 05:13:51 -0800
+Processing by TcasesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTcase Load (0.2ms)[0m  [1m[34mSELECT  "tcases".* FROM "tcases" WHERE "tcases"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering tcases/show.html.erb within layouts/application
+  Rendered tcases/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 14ms (Views: 12.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tcases" for 127.0.0.1 at 2016-12-06 05:13:53 -0800
+Processing by TcasesController#index as HTML
+  Rendering tcases/index.html.erb within layouts/application
+  [1m[36mTcase Load (0.3ms)[0m  [1m[34mSELECT "tcases".* FROM "tcases"[0m
+  Rendered tcases/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 16ms (Views: 14.9ms | ActiveRecord: 0.3ms)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[35m (137.7ms)[0m  [1m[35mDROP DATABASE IF EXISTS "torder"[0m
+  [1m[35m (15.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying PRIMARY KEY)[0m
+  [1m[35m (15.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(636616294596855405);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateTcases (20161128134556)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (23.0ms)[0m  [1m[35mCREATE TABLE "tcases" ("id" serial primary key, "title" character varying, "summary" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20161128134556"]]
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", 2016-12-06 13:19:45 UTC], ["updated_at", 2016-12-06 13:19:45 UTC]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(636616294596855405)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'tcases'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+Started GET "/tcases" for 127.0.0.1 at 2016-12-06 05:21:29 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by TcasesController#index as HTML
+  Rendering tcases/index.html.erb within layouts/application
+  [1m[36mTcase Load (0.5ms)[0m  [1m[34mSELECT "tcases".* FROM "tcases"[0m
+  Rendered tcases/index.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 267ms (Views: 256.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/tcases/new" for 127.0.0.1 at 2016-12-06 05:21:42 -0800
+Processing by TcasesController#new as HTML
+  Rendering tcases/new.html.erb within layouts/application
+  Rendered tcases/new.html.erb within layouts/application (26.6ms)
+Completed 200 OK in 75ms (Views: 64.8ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/tcases/new" for 127.0.0.1 at 2016-12-06 05:21:47 -0800
+Processing by TcasesController#new as HTML
+  Rendering tcases/new.html.erb within layouts/application
+  Rendered tcases/new.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 56ms (Views: 53.7ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(636616294596855405);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateTsteps (20161206133835)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(636616294596855405)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(636616294596855405);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateTsteps (20161206133835)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (28.0ms)[0m  [1m[35mCREATE TABLE "tsteps" ("id" serial primary key, "expresult" character varying, "envir" character varying, "author" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20161206133835"]]
+  [1m[35m (18.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(636616294596855405)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'tcases'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'tsteps'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(636616294596855405);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(636616294596855405)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'tcases'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'tsteps'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+Started GET "/tcases" for 127.0.0.1 at 2016-12-06 06:18:39 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by TcasesController#index as HTML
+  Rendering tcases/index.html.erb within layouts/application
+  [1m[36mTcase Load (0.9ms)[0m  [1m[34mSELECT "tcases".* FROM "tcases"[0m
+  Rendered tcases/index.html.erb within layouts/application (15.9ms)
+Completed 200 OK in 679ms (Views: 609.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/tcases/new" for 127.0.0.1 at 2016-12-06 06:18:45 -0800
+Processing by TcasesController#new as HTML
+  Rendering tcases/new.html.erb within layouts/application
+  Rendered tcases/new.html.erb within layouts/application (24.3ms)
+Completed 200 OK in 88ms (Views: 61.4ms | ActiveRecord: 7.7ms)
+
+
+Started GET "/tcases/new" for 127.0.0.1 at 2016-12-06 06:18:58 -0800
+Processing by TcasesController#new as HTML
+  Rendering tcases/new.html.erb within layouts/application
+  Rendered tcases/new.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 34ms (Views: 32.4ms | ActiveRecord: 0.0ms)
+
+

@@ -10,20 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161201120323) do
+ActiveRecord::Schema.define(version: 20161206133835) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "tcases", force: :cascade do |t|
     t.string   "title"
-    t.string   "description"
-    t.string   "instruction"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.string   "summary"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
-  create_table "tobjects", force: :cascade do |t|
+  create_table "tsteps", force: :cascade do |t|
+    t.string   "expresult"
+    t.string   "envir"
+    t.string   "author"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

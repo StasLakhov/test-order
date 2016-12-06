@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
-  resources :tcases
-
-  resources :tobjects
+  resources :tcases do
+    resources :tsteps
+  end
 
 end
