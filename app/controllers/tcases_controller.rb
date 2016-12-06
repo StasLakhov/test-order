@@ -50,7 +50,7 @@ class TcasesController < ApplicationController
   private
 
   def tcase_params
-    params.require(:tcase).permit(:title, :description, :instruction)
+    params.require(:tcase).permit(:title, :summary)
   end
 
 

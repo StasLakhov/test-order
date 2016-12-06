@@ -7,7 +7,7 @@
     <th>author</th>
   </tr>
 
-  <% @tsteps.each do |t| %>
+  <% @tstep.each do |t| %>
       <tr>
         <td><%= t.expresult %></td>
         <td><%= t.envir %></td>
@@ -17,6 +17,6 @@
       </tr>
   <% end %>
 
-  <%= link_to 'Create New Case', new_tcase_path %>
+  <%= link_to 'Create New Case', new_tcase_tstep_path %>
 
 </table>
