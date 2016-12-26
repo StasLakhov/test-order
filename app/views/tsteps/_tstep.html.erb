@@ -1,0 +1,20 @@
+<p>
+  <strong>Expected Result:</strong>
+  <%= tstep.expresult %>
+</p>
+
+<p>
+  <strong>Environment:</strong>
+  <%= tstep.envir %>
+</p>
+
+<p>
+  <strong>Author:</strong>
+  <%= tstep.author %>
+</p>
+
+<p>
+  <%= link_to 'Destroy TStep', [tstep.article, tstep],
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %>
+</p>

@@ -1,0 +1,21 @@
+<%= form_for([@tcase, @tcase.tsteps.build]) do |f| %>
+  <p>
+    <%= f.label :expresult %><br>
+    <%= f.text_field :expresult %>
+  </p>
+
+  <p>
+    <%= f.label :envir %><br>
+    <%= f.text_field :envir %>
+  </p>
+
+  <p>
+    <%= f.label :author %><br>
+    <%= f.text_field :author %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+
+<% end %>

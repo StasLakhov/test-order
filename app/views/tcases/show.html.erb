@@ -1,5 +1,12 @@
 <p>
-  <strong>Case Title:</strong>
+  <strong>Title:</strong>
   <%= @tcase.title %>
+</p>
+
+<p>
+  <strong>Summary:</strong>
   <%= @tcase.summary %>
 </p>
+
+<h2>Add a TStep:</h2>
+<%= render 'tsteps/form' %>

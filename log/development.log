@@ -7050,3 +7050,690 @@ app/views/tsteps/new.html.erb:1:in `_app_views_tsteps_new_html_erb___15317399398
   Rendering /home/stas/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
   Rendered /home/stas/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
   Rendered /home/stas/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (18.7ms)
+Started GET "/tcases/1/tsteps" for 127.0.0.1 at 2016-12-26 19:19:41 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (35.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by TstepsController#index as HTML
+  Parameters: {"tcase_id"=>"1"}
+  Rendering tsteps/index.html.erb within layouts/application
+  Rendered tsteps/index.html.erb within layouts/application (4.6ms)
+Completed 500 Internal Server Error in 72ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+     7:     <th>author</th>
+     8:   </tr>
+     9: 
+    10:   <% @tstep.each do |t| %>
+    11:       <tr>
+    12:         <td><%= t.expresult %></td>
+    13:         <td><%= t.envir %></td>
+  
+app/views/tsteps/index.html.erb:10:in `_app_views_tsteps_index_html_erb__2784135683251590683_23655460'
+  Rendering /home/stas/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/stas/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/stas/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.2ms)
+  Rendering /home/stas/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/stas/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendering /home/stas/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/stas/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/stas/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (26.2ms)
+Started GET "/tcases" for 127.0.0.1 at 2016-12-26 19:19:47 +0200
+Processing by TcasesController#index as HTML
+  Rendering tcases/index.html.erb within layouts/application
+  [1m[36mTcase Load (36.7ms)[0m  [1m[34mSELECT "tcases".* FROM "tcases"[0m
+  Rendered tcases/index.html.erb within layouts/application (141.1ms)
+Completed 200 OK in 441ms (Views: 301.4ms | ActiveRecord: 116.2ms)
+
+
+Started GET "/tcases/1/edit" for 127.0.0.1 at 2016-12-26 19:19:51 +0200
+Processing by TcasesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTcase Load (1.8ms)[0m  [1m[34mSELECT  "tcases".* FROM "tcases" WHERE "tcases"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tcases/edit.html.erb within layouts/application
+  Rendered tcases/edit.html.erb within layouts/application (55.7ms)
+Completed 200 OK in 223ms (Views: 80.4ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/tcases" for 127.0.0.1 at 2016-12-26 19:22:19 +0200
+Processing by TcasesController#index as HTML
+  Rendering tcases/index.html.erb within layouts/application
+  [1m[36mTcase Load (0.4ms)[0m  [1m[34mSELECT "tcases".* FROM "tcases"[0m
+  Rendered tcases/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 23ms (Views: 19.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tcases/new" for 127.0.0.1 at 2016-12-26 19:25:51 +0200
+Processing by TcasesController#new as HTML
+  Rendering tcases/new.html.erb within layouts/application
+  Rendered tcases/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 71ms (Views: 42.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tcases" for 127.0.0.1 at 2016-12-26 19:33:53 +0200
+Processing by TcasesController#index as HTML
+  Rendering tcases/index.html.erb within layouts/application
+  [1m[36mTcase Load (0.6ms)[0m  [1m[34mSELECT "tcases".* FROM "tcases"[0m
+  Rendered tcases/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 32ms (Views: 28.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/tcases/new" for 127.0.0.1 at 2016-12-26 19:33:55 +0200
+Processing by TcasesController#new as HTML
+  Rendering tcases/new.html.erb within layouts/application
+  Rendered tcases/_form.html.erb (2.4ms)
+  Rendered tcases/new.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 30ms (Views: 28.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tcases" for 127.0.0.1 at 2016-12-26 19:34:00 +0200
+Processing by TcasesController#index as HTML
+  Rendering tcases/index.html.erb within layouts/application
+  [1m[36mTcase Load (0.6ms)[0m  [1m[34mSELECT "tcases".* FROM "tcases"[0m
+  Rendered tcases/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 35ms (Views: 32.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/tcases/new" for 127.0.0.1 at 2016-12-26 19:34:03 +0200
+Processing by TcasesController#new as HTML
+  Rendering tcases/new.html.erb within layouts/application
+  Rendered tcases/_form.html.erb (4.5ms)
+  Rendered tcases/new.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 56ms (Views: 52.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tcases" for 127.0.0.1 at 2016-12-26 19:34:08 +0200
+Processing by TcasesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aRckz5Uttra3mHtbP+Dbp/qqPNZBnO/jgXA5baVlmKNqTk6a2/7zW3MiYG3Qs1xsJhJLqbqu/Fci4DfY9mRBpQ==", "tcase"=>{"title"=>"newtcase", "summary"=>""}, "commit"=>"Create Tcase"}
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (16.1ms)[0m  [1m[32mINSERT INTO "tcases" ("title", "summary", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "newtcase"], ["summary", ""], ["created_at", 2016-12-26 17:34:08 UTC], ["updated_at", 2016-12-26 17:34:08 UTC]]
+  [1m[35m (89.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/tcases/4
+Completed 302 Found in 122ms (ActiveRecord: 105.9ms)
+
+
+Started GET "/tcases/4" for 127.0.0.1 at 2016-12-26 19:34:08 +0200
+Processing by TcasesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTcase Load (0.6ms)[0m  [1m[34mSELECT  "tcases".* FROM "tcases" WHERE "tcases"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering tcases/show.html.erb within layouts/application
+  Rendered tcases/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 45ms (Views: 24.6ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/tcases" for 127.0.0.1 at 2016-12-26 19:34:17 +0200
+Processing by TcasesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aRckz5Uttra3mHtbP+Dbp/qqPNZBnO/jgXA5baVlmKNqTk6a2/7zW3MiYG3Qs1xsJhJLqbqu/Fci4DfY9mRBpQ==", "tcase"=>{"title"=>"newtcase", "summary"=>"summary"}, "commit"=>"Create Tcase"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "tcases" ("title", "summary", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "newtcase"], ["summary", "summary"], ["created_at", 2016-12-26 17:34:17 UTC], ["updated_at", 2016-12-26 17:34:17 UTC]]
+  [1m[35m (47.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/tcases/5
+Completed 302 Found in 53ms (ActiveRecord: 48.7ms)
+
+
+Started GET "/tcases/5" for 127.0.0.1 at 2016-12-26 19:34:17 +0200
+Processing by TcasesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mTcase Load (0.2ms)[0m  [1m[34mSELECT  "tcases".* FROM "tcases" WHERE "tcases"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering tcases/show.html.erb within layouts/application
+  Rendered tcases/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 22ms (Views: 20.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tcases" for 127.0.0.1 at 2016-12-26 19:34:23 +0200
+Processing by TcasesController#index as HTML
+  Rendering tcases/index.html.erb within layouts/application
+  [1m[36mTcase Load (0.6ms)[0m  [1m[34mSELECT "tcases".* FROM "tcases"[0m
+  Rendered tcases/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 33ms (Views: 31.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/tcases/4/edit" for 127.0.0.1 at 2016-12-26 19:34:29 +0200
+Processing by TcasesController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTcase Load (0.4ms)[0m  [1m[34mSELECT  "tcases".* FROM "tcases" WHERE "tcases"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering tcases/edit.html.erb within layouts/application
+  Rendered tcases/edit.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 24ms (Views: 22.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tcases/5/edit" for 127.0.0.1 at 2016-12-26 19:34:33 +0200
+Processing by TcasesController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mTcase Load (1.2ms)[0m  [1m[34mSELECT  "tcases".* FROM "tcases" WHERE "tcases"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering tcases/edit.html.erb within layouts/application
+  Rendered tcases/edit.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 38ms (Views: 30.4ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/tcases" for 127.0.0.1 at 2016-12-26 19:43:25 +0200
+Processing by TcasesController#index as HTML
+  Rendering tcases/index.html.erb within layouts/application
+  [1m[36mTcase Load (0.4ms)[0m  [1m[34mSELECT "tcases".* FROM "tcases"[0m
+  Rendered tcases/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 27ms (Views: 25.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tcases/new" for 127.0.0.1 at 2016-12-26 19:43:29 +0200
+Processing by TcasesController#new as HTML
+  Rendering tcases/new.html.erb within layouts/application
+  Rendered tcases/_form.html.erb (2.0ms)
+  Rendered tcases/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 22ms (Views: 21.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tcases/1" for 127.0.0.1 at 2016-12-26 19:43:35 +0200
+Processing by TcasesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTcase Load (0.4ms)[0m  [1m[34mSELECT  "tcases".* FROM "tcases" WHERE "tcases"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tcases/show.html.erb within layouts/application
+  Rendered tcases/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 19ms (Views: 16.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tcases" for 127.0.0.1 at 2016-12-26 19:46:44 +0200
+Processing by TcasesController#index as HTML
+  Rendering tcases/index.html.erb within layouts/application
+  [1m[36mTcase Load (0.4ms)[0m  [1m[34mSELECT "tcases".* FROM "tcases"[0m
+  Rendered tcases/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 26ms (Views: 23.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tcases/1" for 127.0.0.1 at 2016-12-26 19:46:48 +0200
+Processing by TcasesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTcase Load (0.5ms)[0m  [1m[34mSELECT  "tcases".* FROM "tcases" WHERE "tcases"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tcases/show.html.erb within layouts/application
+  Rendered tcases/show.html.erb within layouts/application (66.9ms)
+Completed 500 Internal Server Error in 72ms (ActiveRecord: 3.1ms)
+
+
+  
+ActionView::Template::Error (PG::UndefinedColumn: ERROR:  column tsteps.tcase_id does not exist
+LINE 1: SELECT "tsteps".* FROM "tsteps" WHERE "tsteps"."tcase_id" = ...
+                                              ^
+: SELECT "tsteps".* FROM "tsteps" WHERE "tsteps"."tcase_id" = $1):
+     9: </p>
+    10: 
+    11: <h2>Comments</h2>
+    12: <%= render @tcase.tsteps %>
+    13: 
+    14: <h2>Add a comment:</h2>
+    15: <%= render 'tsteps/form' %>
+  
+app/views/tcases/show.html.erb:12:in `_app_views_tcases_show_html_erb___3643294650427146021_16006480'
+  Rendering /home/stas/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/stas/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/stas/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.7ms)
+  Rendering /home/stas/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/stas/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering /home/stas/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/stas/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/stas/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (20.0ms)
+Started GET "/tcases/1" for 127.0.0.1 at 2016-12-26 19:47:43 +0200
+Processing by TcasesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTcase Load (0.6ms)[0m  [1m[34mSELECT  "tcases".* FROM "tcases" WHERE "tcases"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tcases/show.html.erb within layouts/application
+  Rendered tsteps/_form.html.erb (12.9ms)
+  Rendered tcases/show.html.erb within layouts/application (15.2ms)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 3.7ms)
+
+
+  
+ActionView::Template::Error (unknown attribute 'tcase_id' for Tstep.):
+    1: <%= form_for([@tcase, @tcase.tsteps.build]) do |f| %>
+    2:   <p>
+    3:     <%= f.label :expresult %><br>
+    4:     <%= f.text_field :expresult %>
+  
+app/views/tsteps/_form.html.erb:1:in `_app_views_tsteps__form_html_erb___1408260599943659759_70295402027820'
+app/views/tcases/show.html.erb:14:in `_app_views_tcases_show_html_erb___3643294650427146021_70295402214760'
+  Rendering /home/stas/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/stas/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/stas/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.6ms)
+  Rendering /home/stas/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/stas/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendering /home/stas/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/stas/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/stas/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (19.7ms)
+Started GET "/tcases/1" for 127.0.0.1 at 2016-12-26 19:48:39 +0200
+Processing by TcasesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTcase Load (1.5ms)[0m  [1m[34mSELECT  "tcases".* FROM "tcases" WHERE "tcases"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tcases/show.html.erb within layouts/application
+  Rendered tcases/show.html.erb within layouts/application (4.4ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 2.3ms)
+
+
+  
+ActionView::Template::Error (PG::UndefinedColumn: ERROR:  column tsteps.tcase_id does not exist
+LINE 1: SELECT "tsteps".* FROM "tsteps" WHERE "tsteps"."tcase_id" = ...
+                                              ^
+: SELECT "tsteps".* FROM "tsteps" WHERE "tsteps"."tcase_id" = $1):
+     9: </p>
+    10: 
+    11: <h2>Comments</h2>
+    12: <%= render @tcase.tsteps %>
+    13: 
+    14: <h2>Add a comment:</h2>
+    15: <%= render 'tsteps/form' %>
+  
+app/views/tcases/show.html.erb:12:in `_app_views_tcases_show_html_erb___3643294650427146021_70295407723660'
+  Rendering /home/stas/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/stas/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/stas/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.5ms)
+  Rendering /home/stas/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/stas/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendering /home/stas/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/stas/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/stas/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (19.6ms)
+Started GET "/tcases/1" for 127.0.0.1 at 2016-12-26 19:49:16 +0200
+Processing by TcasesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTcase Load (0.7ms)[0m  [1m[34mSELECT  "tcases".* FROM "tcases" WHERE "tcases"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tcases/show.html.erb within layouts/application
+  Rendered tcases/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 24ms (Views: 20.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/tcases/1" for 127.0.0.1 at 2016-12-26 19:50:04 +0200
+Processing by TcasesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTcase Load (1.2ms)[0m  [1m[34mSELECT  "tcases".* FROM "tcases" WHERE "tcases"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tcases/show.html.erb within layouts/application
+  Rendered tcases/show.html.erb within layouts/application (6.7ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 1.2ms)
+
+
+  
+ActionView::Template::Error (PG::UndefinedColumn: ERROR:  column tsteps.tcase_id does not exist
+LINE 1: SELECT "tsteps".* FROM "tsteps" WHERE "tsteps"."tcase_id" = ...
+                                              ^
+: SELECT "tsteps".* FROM "tsteps" WHERE "tsteps"."tcase_id" = $1):
+     9: </p>
+    10: 
+    11: <h2>Comments</h2>
+    12: <%= render @tcase.tsteps %>
+    13: 
+    14: <h2>Add a comment:</h2>
+    15: <%= render 'tsteps/form' %>
+  
+app/views/tcases/show.html.erb:12:in `_app_views_tcases_show_html_erb___3643294650427146021_70295408189180'
+  Rendering /home/stas/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/stas/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/stas/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.9ms)
+  Rendering /home/stas/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/stas/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendering /home/stas/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/stas/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/stas/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (20.9ms)
+Started GET "/tcases/1" for 127.0.0.1 at 2016-12-26 19:51:02 +0200
+Processing by TcasesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTcase Load (0.6ms)[0m  [1m[34mSELECT  "tcases".* FROM "tcases" WHERE "tcases"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tcases/show.html.erb within layouts/application
+  Rendered tcases/show.html.erb within layouts/application (5.3ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `summary' for nil:NilClass):
+     5: 
+     6: <p>
+     7:   <strong>Summary:</strong>
+     8:   <%= @tcases.summary %>
+     9: </p>
+    10: 
+    11: <h2>Comments</h2>
+  
+app/views/tcases/show.html.erb:8:in `_app_views_tcases_show_html_erb___3643294650427146021_70295410168180'
+  Rendering /home/stas/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/stas/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/stas/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.0ms)
+  Rendering /home/stas/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/stas/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendering /home/stas/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/stas/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/stas/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (19.8ms)
+Started GET "/tcases/1" for 127.0.0.1 at 2016-12-26 19:51:28 +0200
+Processing by TcasesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTcase Load (0.8ms)[0m  [1m[34mSELECT  "tcases".* FROM "tcases" WHERE "tcases"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tcases/show.html.erb within layouts/application
+  Rendered tcases/show.html.erb within layouts/application (7.2ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `tsteps' for nil:NilClass):
+     9: </p>
+    10: 
+    11: <h2>Comments</h2>
+    12: <%= render @tcases.tsteps %>
+    13: 
+    14: <h2>Add a comment:</h2>
+    15: <%= render 'tsteps/form' %>
+  
+app/views/tcases/show.html.erb:12:in `_app_views_tcases_show_html_erb___3643294650427146021_70295364239560'
+  Rendering /home/stas/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/stas/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/stas/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.5ms)
+  Rendering /home/stas/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/stas/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendering /home/stas/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/stas/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/stas/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (20.3ms)
+Started GET "/tcases" for 127.0.0.1 at 2016-12-26 19:52:06 +0200
+Processing by TcasesController#index as HTML
+  Rendering tcases/index.html.erb within layouts/application
+  [1m[36mTcase Load (0.5ms)[0m  [1m[34mSELECT "tcases".* FROM "tcases"[0m
+  Rendered tcases/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 26ms (Views: 23.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/tcases" for 127.0.0.1 at 2016-12-26 19:53:40 +0200
+Processing by TcasesController#index as HTML
+  Rendering tcases/index.html.erb within layouts/application
+  [1m[36mTcase Load (0.5ms)[0m  [1m[34mSELECT "tcases".* FROM "tcases"[0m
+  Rendered tcases/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 35ms (Views: 31.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/tcases/5" for 127.0.0.1 at 2016-12-26 19:53:43 +0200
+Processing by TcasesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mTcase Load (0.4ms)[0m  [1m[34mSELECT  "tcases".* FROM "tcases" WHERE "tcases"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering tcases/show.html.erb within layouts/application
+  Rendered tcases/show.html.erb within layouts/application (3.9ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `tsteps' for nil:NilClass):
+     9: </p>
+    10: 
+    11: <h2>Comments</h2>
+    12: <%= render @tcases.tsteps %>
+    13: 
+    14: <h2>Add a comment:</h2>
+    15: <%= render 'tsteps/form' %>
+  
+app/views/tcases/show.html.erb:12:in `_app_views_tcases_show_html_erb___3643294650427146021_4730040'
+  Rendering /home/stas/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/stas/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/stas/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.6ms)
+  Rendering /home/stas/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/stas/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendering /home/stas/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/stas/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/stas/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (22.5ms)
+Started GET "/tcases/5" for 127.0.0.1 at 2016-12-26 19:53:59 +0200
+Processing by TcasesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mTcase Load (0.7ms)[0m  [1m[34mSELECT  "tcases".* FROM "tcases" WHERE "tcases"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering tcases/show.html.erb within layouts/application
+  Rendered tcases/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 27ms (Views: 22.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/tcases" for 127.0.0.1 at 2016-12-26 19:54:02 +0200
+Processing by TcasesController#index as HTML
+  Rendering tcases/index.html.erb within layouts/application
+  [1m[36mTcase Load (0.5ms)[0m  [1m[34mSELECT "tcases".* FROM "tcases"[0m
+  Rendered tcases/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 23ms (Views: 21.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/tcases" for 127.0.0.1 at 2016-12-26 19:54:35 +0200
+Processing by TcasesController#index as HTML
+  Rendering tcases/index.html.erb within layouts/application
+  [1m[36mTcase Load (0.4ms)[0m  [1m[34mSELECT "tcases".* FROM "tcases"[0m
+  Rendered tcases/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 19ms (Views: 18.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tcases" for 127.0.0.1 at 2016-12-26 19:54:36 +0200
+Processing by TcasesController#index as HTML
+  Rendering tcases/index.html.erb within layouts/application
+  [1m[36mTcase Load (0.7ms)[0m  [1m[34mSELECT "tcases".* FROM "tcases"[0m
+  Rendered tcases/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 28ms (Views: 24.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/tcases/1" for 127.0.0.1 at 2016-12-26 19:54:39 +0200
+Processing by TcasesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTcase Load (0.4ms)[0m  [1m[34mSELECT  "tcases".* FROM "tcases" WHERE "tcases"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tcases/show.html.erb within layouts/application
+  Rendered tsteps/_form.html.erb (2.3ms)
+  Rendered tcases/show.html.erb within layouts/application (3.3ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (unknown attribute 'tcase_id' for Tstep.):
+    1: <%= form_for([@tcase, @tcase.tsteps.build]) do |f| %>
+    2:   <p>
+    3:     <%= f.label :expresult %><br>
+    4:     <%= f.text_field :expresult %>
+  
+app/views/tsteps/_form.html.erb:1:in `_app_views_tsteps__form_html_erb___1408260599943659759_70295365889260'
+app/views/tcases/show.html.erb:14:in `_app_views_tcases_show_html_erb___3643294650427146021_70295327446560'
+  Rendering /home/stas/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/stas/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/stas/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.2ms)
+  Rendering /home/stas/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/stas/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendering /home/stas/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/stas/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/stas/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (23.3ms)
+Started GET "/tcases" for 127.0.0.1 at 2016-12-26 19:54:49 +0200
+Processing by TcasesController#index as HTML
+  Rendering tcases/index.html.erb within layouts/application
+  [1m[36mTcase Load (0.4ms)[0m  [1m[34mSELECT "tcases".* FROM "tcases"[0m
+  Rendered tcases/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 20ms (Views: 19.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tcases" for 127.0.0.1 at 2016-12-26 19:55:24 +0200
+Processing by TcasesController#index as HTML
+  Rendering tcases/index.html.erb within layouts/application
+  [1m[36mTcase Load (0.5ms)[0m  [1m[34mSELECT "tcases".* FROM "tcases"[0m
+  Rendered tcases/index.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 39ms (Views: 34.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/tcases/1" for 127.0.0.1 at 2016-12-26 19:55:26 +0200
+Processing by TcasesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTcase Load (0.3ms)[0m  [1m[34mSELECT  "tcases".* FROM "tcases" WHERE "tcases"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tcases/show.html.erb within layouts/application
+  Rendered tcases/show.html.erb within layouts/application (1.9ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (Missing partial tsteps/__form with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/stas/rails-app/test-order/app/views"
+):
+     9: </p>
+    10: 
+    11: <h2>Add a comment:</h2>
+    12: <%= render 'tsteps/_form' %>
+  
+app/views/tcases/show.html.erb:12:in `_app_views_tcases_show_html_erb___3643294650427146021_70295409469580'
+  Rendering /home/stas/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/stas/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/stas/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.5ms)
+  Rendering /home/stas/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/stas/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendering /home/stas/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/stas/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/stas/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (20.4ms)
+Started GET "/tcases/1" for 127.0.0.1 at 2016-12-26 19:55:26 +0200
+Processing by TcasesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTcase Load (0.4ms)[0m  [1m[34mSELECT  "tcases".* FROM "tcases" WHERE "tcases"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tcases/show.html.erb within layouts/application
+  Rendered tcases/show.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (Missing partial tsteps/__form with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/stas/rails-app/test-order/app/views"
+):
+     9: </p>
+    10: 
+    11: <h2>Add a comment:</h2>
+    12: <%= render 'tsteps/_form' %>
+  
+app/views/tcases/show.html.erb:12:in `_app_views_tcases_show_html_erb___3643294650427146021_70295409562020'
+  Rendering /home/stas/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/stas/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/stas/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.3ms)
+  Rendering /home/stas/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/stas/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendering /home/stas/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/stas/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/stas/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (18.9ms)
+Started GET "/tcases/1" for 127.0.0.1 at 2016-12-26 19:56:05 +0200
+Processing by TcasesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTcase Load (1.2ms)[0m  [1m[34mSELECT  "tcases".* FROM "tcases" WHERE "tcases"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tcases/show.html.erb within layouts/application
+  Rendered tsteps/_form.html.erb (4.9ms)
+  Rendered tcases/show.html.erb within layouts/application (6.6ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 1.2ms)
+
+
+  
+ActionView::Template::Error (unknown attribute 'tcase_id' for Tstep.):
+    1: <%= form_for([@tcase, @tcase.tsteps.build]) do |f| %>
+    2:   <p>
+    3:     <%= f.label :expresult %><br>
+    4:     <%= f.text_field :expresult %>
+  
+app/views/tsteps/_form.html.erb:1:in `_app_views_tsteps__form_html_erb___1408260599943659759_17682660'
+app/views/tcases/show.html.erb:12:in `_app_views_tcases_show_html_erb___3643294650427146021_23663180'
+  Rendering /home/stas/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/stas/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/stas/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.6ms)
+  Rendering /home/stas/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/stas/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendering /home/stas/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/stas/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/stas/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (19.6ms)
+Started GET "/tcases" for 127.0.0.1 at 2016-12-26 19:57:32 +0200
+Processing by TcasesController#index as HTML
+  Rendering tcases/index.html.erb within layouts/application
+  [1m[36mTcase Load (0.6ms)[0m  [1m[34mSELECT "tcases".* FROM "tcases"[0m
+  Rendered tcases/index.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 34ms (Views: 30.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/tcases/1" for 127.0.0.1 at 2016-12-26 19:57:34 +0200
+Processing by TcasesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTcase Load (0.4ms)[0m  [1m[34mSELECT  "tcases".* FROM "tcases" WHERE "tcases"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tcases/show.html.erb within layouts/application
+  Rendered tsteps/_form.html.erb (2.7ms)
+  Rendered tcases/show.html.erb within layouts/application (3.8ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (unknown attribute 'tcase_id' for Tstep.):
+    1: <%= form_for([@tcase, @tcase.tsteps.build]) do |f| %>
+    2:   <p>
+    3:     <%= f.label :expresult %><br>
+    4:     <%= f.text_field :expresult %>
+  
+app/views/tsteps/_form.html.erb:1:in `_app_views_tsteps__form_html_erb___1408260599943659759_17291300'
+app/views/tcases/show.html.erb:12:in `_app_views_tcases_show_html_erb___3643294650427146021_18049280'
+  Rendering /home/stas/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/stas/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/stas/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.7ms)
+  Rendering /home/stas/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/stas/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendering /home/stas/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/stas/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/stas/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (21.0ms)
+Started GET "/tcases" for 127.0.0.1 at 2016-12-26 19:57:36 +0200
+Processing by TcasesController#index as HTML
+  Rendering tcases/index.html.erb within layouts/application
+  [1m[36mTcase Load (0.3ms)[0m  [1m[34mSELECT "tcases".* FROM "tcases"[0m
+  Rendered tcases/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 20ms (Views: 19.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tcases/new" for 127.0.0.1 at 2016-12-26 19:57:44 +0200
+Processing by TcasesController#new as HTML
+  Rendering tcases/new.html.erb within layouts/application
+  Rendered tcases/_form.html.erb (3.8ms)
+  Rendered tcases/new.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 31ms (Views: 29.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tcases" for 127.0.0.1 at 2016-12-26 19:57:50 +0200
+Processing by TcasesController#index as HTML
+  Rendering tcases/index.html.erb within layouts/application
+  [1m[36mTcase Load (0.4ms)[0m  [1m[34mSELECT "tcases".* FROM "tcases"[0m
+  Rendered tcases/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 23ms (Views: 21.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tcases/1" for 127.0.0.1 at 2016-12-26 19:57:52 +0200
+Processing by TcasesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTcase Load (1.1ms)[0m  [1m[34mSELECT  "tcases".* FROM "tcases" WHERE "tcases"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tcases/show.html.erb within layouts/application
+  Rendered tsteps/_form.html.erb (3.8ms)
+  Rendered tcases/show.html.erb within layouts/application (7.0ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 1.1ms)
+
+
+  
+ActionView::Template::Error (unknown attribute 'tcase_id' for Tstep.):
+    1: <%= form_for([@tcase, @tcase.tsteps.build]) do |f| %>
+    2:   <p>
+    3:     <%= f.label :expresult %><br>
+    4:     <%= f.text_field :expresult %>
+  
+app/views/tsteps/_form.html.erb:1:in `_app_views_tsteps__form_html_erb___1408260599943659759_70295365412200'
+app/views/tcases/show.html.erb:12:in `_app_views_tcases_show_html_erb___3643294650427146021_70295408692720'
+  Rendering /home/stas/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/stas/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/stas/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.8ms)
+  Rendering /home/stas/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/stas/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendering /home/stas/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/stas/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/stas/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (20.0ms)
+Started GET "/tcases/1" for 127.0.0.1 at 2016-12-26 19:58:10 +0200
+Processing by TcasesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTcase Load (0.8ms)[0m  [1m[34mSELECT  "tcases".* FROM "tcases" WHERE "tcases"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tcases/show.html.erb within layouts/application
+  Rendered tcases/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 35ms (Views: 29.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/tcases" for 127.0.0.1 at 2016-12-26 19:58:14 +0200
+Processing by TcasesController#index as HTML
+  Rendering tcases/index.html.erb within layouts/application
+  [1m[36mTcase Load (0.3ms)[0m  [1m[34mSELECT "tcases".* FROM "tcases"[0m
+  Rendered tcases/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 21ms (Views: 19.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tcases/1" for 127.0.0.1 at 2016-12-26 19:58:16 +0200
+Processing by TcasesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTcase Load (0.4ms)[0m  [1m[34mSELECT  "tcases".* FROM "tcases" WHERE "tcases"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tcases/show.html.erb within layouts/application
+  Rendered tcases/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 21ms (Views: 18.6ms | ActiveRecord: 0.4ms)
+
+
