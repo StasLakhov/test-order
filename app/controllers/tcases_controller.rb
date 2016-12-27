@@ -33,7 +33,7 @@ class TcasesController < ApplicationController
     @tcase = Tcase.find(params[:id])
 
     if @tcase.update(tcase_params)
-      redirect_to @tcase
+      redirect_to tcases_path
 
     else
       render 'edit'
