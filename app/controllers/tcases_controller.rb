@@ -17,7 +17,7 @@ class TcasesController < ApplicationController
     @tcase = Tcase.new(tcase_params)
 
     if @tcase.save(tcase_params)
-      redirect_to @tcase
+      redirect_to tcases_path
     else
       render 'new'
     end
