@@ -1,6 +1,6 @@
 class TcasesController < ApplicationController
 
-  def  index
+  def index
     @tcases = Tcase.all
   end
 

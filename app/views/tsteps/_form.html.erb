@@ -1,4 +1,4 @@
-<%= form_for([@tcase, @tcase.tsteps.build]) do |f| %>
+<%= form_for([@tcase, Tstep.new]) do |f| %>
   <p>
     <%= f.label :expresult %><br>
     <%= f.text_field :expresult %>
