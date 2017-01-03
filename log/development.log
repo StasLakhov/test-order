@@ -12095,3 +12095,19 @@ Processing by TcasesController#index as HTML
 Completed 200 OK in 28ms (Views: 22.1ms | ActiveRecord: 1.3ms)
 
 
+Started GET "/tcases" for 127.0.0.1 at 2017-01-03 05:01:13 -0800
+Processing by TcasesController#index as HTML
+  Rendering tcases/index.html.erb within layouts/application
+  [1m[36mTcase Load (0.4ms)[0m  [1m[34mSELECT "tcases".* FROM "tcases"[0m
+  Rendered tcases/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 24ms (Views: 23.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tcases" for 127.0.0.1 at 2017-01-03 05:01:24 -0800
+Processing by TcasesController#index as HTML
+  Rendering tcases/index.html.erb within layouts/application
+  [1m[36mTcase Load (0.5ms)[0m  [1m[34mSELECT "tcases".* FROM "tcases"[0m
+  Rendered tcases/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 31ms (Views: 27.1ms | ActiveRecord: 0.5ms)
+
+
