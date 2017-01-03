@@ -10,7 +10,6 @@ class TcasesController < ApplicationController
 
   def new
     @tcase = Tcase.new
-
   end
 
   def create
@@ -26,7 +25,6 @@ class TcasesController < ApplicationController
 
   def edit
     @tcase = Tcase.find(params[:id])
-
   end
 
   def update
@@ -42,8 +40,7 @@ class TcasesController < ApplicationController
   end
 
   def destroy
-    @tcase = Tcase.find(params[:id])
-    @tcase.destroy
+    @tcase = Tcase.find(params[:id]).destroy
     redirect_to tcases_path
   end
 

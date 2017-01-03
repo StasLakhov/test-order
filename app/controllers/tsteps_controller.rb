@@ -1,17 +1,13 @@
 class TstepsController < ApplicationController
 
   def create
-    @tcase = Tcase.find(params[:tcase_id])
-    @tstep = @tcase.tsteps.create(tstep_params)
-    redirect_to tcases_path
-
+    @tstep = Tcase.find(params[:tcase_id]).tsteps.create(tstep_params)
+    redirect_to tcases_path(@tcase)
   end
 
   def destroy
-    @tcase = Tcase.find(params[:tcase_id])
-    @tstep = @tcase.tsteps.find(params[:id])
-    @tstep.destroy
-    redirect_to tcases_path
+    @tcase = Tcase.find(params[:tcase_id]).tsteps.find(params[:id]).destroy
+    redirect_to tcases_path(@tcase)
   end
 
   private

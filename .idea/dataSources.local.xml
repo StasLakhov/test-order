@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="Rails test-order: production" uuid="32dd73c3-9837-4fa3-9157-c0ee083ebce4">
+      <database-info product="PostgreSQL" version="9.3.14" jdbc-version="4.0" driver-name="PostgreSQL Native Driver" driver-version="PostgreSQL 9.4 JDBC4 (build 1201)">
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
+      <user-name>torder</user-name>
+      <user-password>dfdadfcbdfd9dfd9df9bdf98df99df9edf9f</user-password>
+    </data-source>
+    <data-source name="Rails test-order: development" uuid="b048f196-4410-436f-92f5-d1a5ddeba13f">
+      <database-info product="PostgreSQL" version="9.3.14" jdbc-version="4.0" driver-name="PostgreSQL Native Driver" driver-version="PostgreSQL 9.4 JDBC4 (build 1201)">
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
+      <user-name>torder</user-name>
+      <user-password>dfdadfcbdfd9dfd9df9bdf98df99df9edf9f</user-password>
+      <introspection-scope>torder:pg_catalog,public,torder</introspection-scope>
+      <resolve-scope>torder:public,torder</resolve-scope>
+    </data-source>
+  </component>
+</project>
